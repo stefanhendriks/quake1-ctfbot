@@ -30,7 +30,9 @@ You need to install it from disk, works like a charm.
 
 # Running your own progs.dat code
 
-Make sure
+You can either do the following steps below *or* you use the `ctfbot-without-pak.zip` file instead of `ctfbot12` zip file.
+
+If you want to do it manually, make sure
 
 - you have unpacked the `pak1.pak` and `pak0.pak` files in the `ctfbot` folder
   - you can use [Pak Explorer](http://www.quaketerminus.com/tools.shtml) for this.
