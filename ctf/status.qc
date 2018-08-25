@@ -70,6 +70,8 @@ void() MOTD =
 	sprint(self, "\n              ริฦย๏๔ซ ฎ beta \n");
 	sprint(self, "      http://captured.com/ctfbot/\n");
 	sprint(self, "   CTF Bot 1.4 by Drew 'bz' Davidson\n");
+	sprint(self, "  further enhanced by Stefan Hendriks\n");
+	sprint(self, "  see \n");
 
 	if (map_has_waypoints)
 		sprint(self, "   LOADING waypoints for ");
