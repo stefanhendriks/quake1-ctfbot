@@ -4294,10 +4294,11 @@ void (entity p) SetBotSkin =
 //TONY
 //CHANGED THIS FUNCTION AROUND
 
-	if (p.team == TEAM_COLOR1)
-		p.skin = 1;
-	else if (p.team == TEAM_COLOR2)
-		p.skin = 3;
+//	if (p.team == TEAM_COLOR1)
+//		p.skin = 1;
+//	else if (p.team == TEAM_COLOR2)
+//		p.skin = 3;
+
 //GL BOTS
 //||
 //the bot is not a simulated client and does not have a colormap
@@ -4318,15 +4319,15 @@ void (entity p) SetBotSkin =
 	// skins 5-6 = red, red visor
 	// skins 7-8 = blue, blue visor
 
-//	if (p.team == TEAM_COLOR1)
-//		p.skin = 5;
-//	else if (p.team == TEAM_COLOR2)
-//		p.skin = 7;
-//	else
-//		p.skin = 0;
-//
-//	if (p.bot_skill >= 2)
-//		p.skin = p.skin + 1; // visor dude
+	if (p.team == TEAM_COLOR1)
+		p.skin = 5;
+	else if (p.team == TEAM_COLOR2)
+		p.skin = 7;
+	else
+		p.skin = 0;
+
+	if (p.bot_skill >= 2)
+		p.skin = p.skin + 1; // visor dude
 };
 //=============================================================
 //void () BotsUseSkins = 
