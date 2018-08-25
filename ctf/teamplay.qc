@@ -16,8 +16,8 @@ float TEAM_STRICT_COOP =	0;	// Strict Coop
 // Allowed team colors
 // -1 indicates no color
 
-float TEAM_COLOR1       =       5;
-float TEAM_COLOR2       =       14;
+float TEAM_COLOR1       =       5;			// RED
+float TEAM_COLOR2       =       14;			// BLUE
 
 float team1shirt;
 float team2shirt;
