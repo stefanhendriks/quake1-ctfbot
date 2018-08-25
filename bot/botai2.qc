@@ -31,7 +31,7 @@ float () BotKicksAss =
 		return TRUE;
 
 	return FALSE;
-}
+};
 
 //====================================================
 // self is the bot
