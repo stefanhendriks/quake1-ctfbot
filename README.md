@@ -1,5 +1,5 @@
 # quake1-ctfbot
-Copy of ctf (threewave) and bot code
+Copy of [ctf bot and CTF game code (Threewave) and bot code](https://www.moddb.com/mods/threewave-capture)
 
 # Compiling
 This is QuakeC, a compiler (QCC) is also in this repo, it is very old (as it was taken from the original ZIP file).
