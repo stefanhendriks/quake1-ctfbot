@@ -15,9 +15,27 @@
 //along with this program; if not, write to the Free Software
 //Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
+//====================================================
+// self is the bot
+// Returns TRUE if kicking ass (ie has enough ammo, and good weapons)
+//====================================================
+float () BotKicksAss =
+{
+	if ((self.items & IT_LIGHTNING) && (self.ammo_cells > 25))
+		return TRUE;
+	if ((self.items & IT_ROCKET_LAUNCHER) && (self.ammo_rockets > 25))
+		return TRUE;
+	if ((self.items & IT_GRENADE_LAUNCHER) && (self.ammo_rockets > 25))
+		return TRUE;
+	if ((self.items & IT_SUPER_NAILGUN) && (self.ammo_nails > 25))
+		return TRUE;
+
+	return FALSE;
+}
 
 //====================================================
 // self is the bot
+// Returns true if discharge/suicide is a good option
 //====================================================
 float () BotShouldDischarge =
 {
@@ -33,16 +51,14 @@ local entity p;
 		return FALSE;
 
 	// don't discharge if we are kickin ass
-	if ((self.items & IT_LIGHTNING) && (self.ammo_cells > 25))
-		return FALSE;
-	if ((self.items & IT_ROCKET_LAUNCHER) && (self.ammo_rockets > 25))
-		return FALSE;
-	if ((self.items & IT_GRENADE_LAUNCHER) && (self.ammo_rockets > 25))
-		return FALSE;
-	if ((self.items & IT_SUPER_NAILGUN) && (self.ammo_nails > 25))
+	if (BotKicksAss() == TRUE)
 		return FALSE;
 
+	// count the amount of bodies we will potentially fry with discharge
 	num_we_will_fry = 0;
+
+	// search within radius (not guarenteed to be bots in same 'water pool', but it is
+	// enough
 	p = findradius(self.origin, 1000);
 	while (p != world)
 	{
@@ -51,8 +67,8 @@ local entity p;
 		if (p.health > 0)
 		if (!(p.observer_flags & PLAYER_NO_TARGET))
 		if (!p.observer)
-		if (pointcontents(p.origin) == CONTENT_WATER)
-		if (BotCanSeePlayer(p))
+		if (pointcontents(p.origin) == CONTENT_WATER) // in water
+		if (BotCanSeePlayer(p)) // can see it
 		{
 			num_we_will_fry = num_we_will_fry + 1;
 		}
@@ -64,7 +80,8 @@ local entity p;
 		// at this point, we will probably kill 2 or more enemies
 		// if we discharge
 
-		if (random() < 0.02)
+		// 10% chance we will discharge (not 2%, 10% is way more fun :) )
+		if (random() < 0.10)
 		{
 			if (bot_debug >= 1)
 			{
@@ -78,6 +95,7 @@ local entity p;
 
 	return FALSE;
 };
+
 //====================================================
 // self is the bot
 //====================================================
@@ -587,16 +605,16 @@ float () BotSayStart =
 //use talkname
 //		bprint(self.netname);
 		bprint(self.talkname);
-		bprint("º ");
+		bprint("ï¿½ ");
 	}
 	else
 	{
 		if (self.team  == TEAM_COLOR1)
-			bprint("ÒåäÂïôº ");
+			bprint("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ");
 		else if (self.team == TEAM_COLOR2)
-			bprint("ÂìõåÂïôº ");
+			bprint("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ");
 		else
-			bprint("Âïôº ");
+			bprint("ï¿½ï¿½ï¿½ï¿½ ");
 	}
 
 	return TRUE;
@@ -615,16 +633,16 @@ float () BotSayTeamStart =
 //use talkname
 //		bprintteam(self.netname);
 		bprintteam(self.talkname);
-		bprintteam("º ");
+		bprintteam("ï¿½ ");
 	}
 	else
 	{
 		if (self.team == TEAM_COLOR1)
-			bprintteam("ÒåäÂïôº ");
+			bprintteam("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ");
 		else if (self.team == TEAM_COLOR2)
-			bprintteam("ÂìõåÂïôº ");
+			bprintteam("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ");
 		else
-			bprintteam("Âïôº ");
+			bprintteam("ï¿½ï¿½ï¿½ï¿½ ");
 	}
 
 	return TRUE;
@@ -638,16 +656,16 @@ void () BotSayStart2 =
 //use talkname
 //		bprint(self.netname);
 		bprint(self.talkname);
-		bprint("º ");
+		bprint("ï¿½ ");
 	}
 	else
 	{
 		if (self.team == TEAM_COLOR1)
-			bprint("ÒåäÂïôº ");
+			bprint("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ");
 		else if (self.team == TEAM_COLOR2)
-			bprint("ÂìõåÂïôº ");
+			bprint("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ");
 		else
-			bprint("Âïôº ");
+			bprint("ï¿½ï¿½ï¿½ï¿½ ");
 	}
 };
 //==========================================================
@@ -659,16 +677,16 @@ void () BotSayTeamStart2 =
 //use talkname
 //		bprintteam(self.netname);
 		bprintteam(self.talkname);
-		bprintteam("º ");
+		bprintteam("ï¿½ ");
 	}
 	else
 	{
 		if (self.team == TEAM_COLOR1)
-			bprintteam("ÒåäÂïôº ");
+			bprintteam("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ");
 		else if (self.team == TEAM_COLOR2)
-			bprintteam("ÂìõåÂïôº ");
+			bprintteam("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ");
 		else
-			bprintteam("Âïôº ");
+			bprintteam("ï¿½ï¿½ï¿½ï¿½ ");
 	}
 };
 //==========================================================
@@ -1386,12 +1404,12 @@ local string st;
 	
 	if (self.team == TEAM_COLOR1)
 	{
-		sprint(self, "Òåä Team Status:\n");
+		sprint(self, "ï¿½ï¿½ï¿½ Team Status:\n");
 		fenemyteam = TEAM_COLOR2;
 	}
 	else if (self.team == TEAM_COLOR2)
 	{
-		sprint(self, "Âìõå Team Status:\n");
+		sprint(self, "ï¿½ï¿½ï¿½ï¿½ Team Status:\n");
 		fenemyteam = TEAM_COLOR1;
 	}
 
@@ -1560,7 +1578,7 @@ local float found;
 	
 	
 	sprint(self, self.netname);
-	sprint(self, " orders ÄÅÆÅÎÄ‘ ");		// DEFEND
+	sprint(self, " orders ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‘ ");		// DEFEND
 	PrintTeamStatus();
 };
 //==========================================================
@@ -1673,7 +1691,7 @@ local float found;
 	}
 	
 	sprint(self, self.netname);
-	sprint(self, " orders ÁÔÔÁÃË‘ ");		// ATTACK
+	sprint(self, " orders ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë‘ ");		// ATTACK
 	PrintTeamStatus();
 };
 //==========================================================
@@ -1787,7 +1805,7 @@ local float found;
 	}
 
 	sprint(self, self.netname);
-	sprint(self, " orders ÒÏÁÍ‘ ");		// ROAM
+	sprint(self, " orders ï¿½ï¿½ï¿½ï¿½Í‘ ");		// ROAM
 	PrintTeamStatus();
 };
 //==========================================================
@@ -1808,12 +1826,12 @@ local entity p;
 
 	if (self.team == TEAM_COLOR1)
 	{
-		sprint(self, "Òåä team to defend\n");
+		sprint(self, "ï¿½ï¿½ï¿½ team to defend\n");
 		last_order_time_team1 = time;
 	}
 	else if (self.team == TEAM_COLOR2)
 	{
-		sprint(self, "Âìõå team to defend\n");
+		sprint(self, "ï¿½ï¿½ï¿½ï¿½ team to defend\n");
 		last_order_time_team2 = time;
 	}
 	else
@@ -1855,12 +1873,12 @@ local entity p;
 	
 	if (self.team == TEAM_COLOR1)
 	{
-		sprint(self, "Òåä team to attack\n");
+		sprint(self, "ï¿½ï¿½ï¿½ team to attack\n");
 		last_order_time_team1 = time;
 	}
 	else if (self.team == TEAM_COLOR2)
 	{
-		sprint(self, "Âìõå team to attack\n");
+		sprint(self, "ï¿½ï¿½ï¿½ï¿½ team to attack\n");
 		last_order_time_team2 = time;
 	}
 	else
@@ -2063,7 +2081,7 @@ local float teamsize_blue, teamsize_red;
 		bprint("keeping teams even:\nAdding ");
 		st = ftos(i);
 		bprint(st);
-		bprint(" ÒÅÄ bots\n");
+		bprint(" ï¿½ï¿½ï¿½ bots\n");
 		
 		added = TRUE;
 
@@ -2085,7 +2103,7 @@ local float teamsize_blue, teamsize_red;
 		bprint("keeping teams even:\nRemoving ");
 		st = ftos(i);
 		bprint(st);
-		bprint(" ÒÅÄ bots\n");
+		bprint(" ï¿½ï¿½ï¿½ bots\n");
 		
 		added = TRUE;
 
@@ -2103,7 +2121,7 @@ local float teamsize_blue, teamsize_red;
 		bprint("keeping teams even:\nAdding ");
 		st = ftos(i);
 		bprint(st);
-		bprint(" ÂÌÕÅ bots\n");
+		bprint(" ï¿½ï¿½ï¿½ï¿½ bots\n");
 		
 		added = TRUE;
 
@@ -2125,7 +2143,7 @@ local float teamsize_blue, teamsize_red;
 		bprint("keeping teams even:\nRemoving ");
 		st = ftos(i);
 		bprint(st);
-		bprint(" ÂÌÕÅ bots\n");
+		bprint(" ï¿½ï¿½ï¿½ï¿½ bots\n");
 		
 		added = TRUE;
 
@@ -2495,9 +2513,9 @@ local string st;
 	bprint(" ");
 
 	if (p.team == TEAM_COLOR1)
-		bprint("ÒÅÄ  ");
+		bprint("ï¿½ï¿½ï¿½  ");
 	else if (p.team == TEAM_COLOR2)
-		bprint("ÂÌÕÅ ");
+		bprint("ï¿½ï¿½ï¿½ï¿½ ");
 
 	bprint(p.netname);
 
@@ -2527,9 +2545,9 @@ local string st;
 	sprint(self, " ");
 
 	if (p.team == TEAM_COLOR1)
-		sprint(self, "ÒÅÄ  ");
+		sprint(self, "ï¿½ï¿½ï¿½  ");
 	else if (p.team == TEAM_COLOR2)
-		sprint(self, "ÂÌÕÅ ");
+		sprint(self, "ï¿½ï¿½ï¿½ï¿½ ");
 
 	sprint(self, p.netname);
 	
@@ -2565,13 +2583,13 @@ local float best_frags, done;
 	
 	if (broadcst)
 	{
-		bprint("\nŸ\n");
-		bprint("   Òáîëéîçó‘\n");			// [Rankings]
+		bprint("\nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n");
+		bprint("   ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n");			// [Rankings]
 	}
 	else
 	{
-		sprint(self, "\nŸ\n");
-		sprint(self, "   Òáîëéîçó‘\n");		// [Rankings]
+		sprint(self, "\nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n");
+		sprint(self, "   ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n");		// [Rankings]
 	}
 
 	while (!done)
@@ -2800,12 +2818,12 @@ void (float fteam) StartNewPath =
 {
 	if (fteam == TEAM_COLOR1)
 	{
-		dprint("Staring new ÒÅÄ path\n");
+		dprint("Staring new ï¿½ï¿½ï¿½ path\n");
 		current_red_waypoint = 0;
 	}
 	else if (fteam == TEAM_COLOR2)
 	{
-		dprint("Staring new ÂÌÕÅ path\n");
+		dprint("Staring new ï¿½ï¿½ï¿½ï¿½ path\n");
 		current_blue_waypoint = 0;
 	}
 	else
@@ -2876,9 +2894,9 @@ local entity e;
 			if (vlen(self.origin - e.origin) < 30)
 			{
 				if (e.team == TEAM_COLOR1)
-					dprint("ÒÅÄ");
+					dprint("ï¿½ï¿½ï¿½");
 				else if (e.team == TEAM_COLOR2)
-					dprint("ÂÌÕÅ");
+					dprint("ï¿½ï¿½ï¿½ï¿½");
 				else if (e.team == -1)
 					dprint("general");
 				else
@@ -3520,9 +3538,9 @@ local entity e;
 		dprint("new ");
 
 		if (fteam == TEAM_COLOR1)
-			dprint("ÒÅÄ");
+			dprint("ï¿½ï¿½ï¿½");
 		else if (fteam == TEAM_COLOR2)
-			dprint("ÂÌÕÅ");
+			dprint("ï¿½ï¿½ï¿½ï¿½");
 		else if (fteam == -1)
 			dprint("general");
 		else
@@ -3602,9 +3620,9 @@ local float dist;
 	{
 		dprint("Removed ");
 		if (selected.team == TEAM_COLOR1)
-			dprint("ÒÅÄ");
+			dprint("ï¿½ï¿½ï¿½");
 		else if (selected.team == TEAM_COLOR2)
-			dprint("ÂÌÕÅ");
+			dprint("ï¿½ï¿½ï¿½ï¿½");
 		else if (selected.team == -1)
 			dprint("general");
 		dprint(" waypoint number ");
