@@ -1,6 +1,21 @@
 # quake1-ctfbot
 Copy of [ctf bot and CTF game code (Threewave) and bot code](https://www.moddb.com/mods/threewave-capture)
 
+# Getting started
+First go to the ctfbot12 folder, and unpack the `ctfbot12.zip` file in your `Quake` homedir. I suggest you name this `ctfbot`.
+
+Then you can run CTF with the bot by passing the `-game ctfbot` argument to Quake.
+
+Ie:
+```
+quake.exe -game ctfbot
+```
+
+This should already get it up and running.
+
+Do note, if you want to have your changes in any bot code working, you need to do a bit more. See below what to do
+to make those changes work.
+
 # Compiling
 This is QuakeC, a compiler (QCC) is also in this repo, it is very old (as it was taken from the original ZIP file).
 
