@@ -1,0 +1,311 @@
+
+<!-- saved from url=(0066)http://www.gamers.org/dEngine/quake/spec/quake-spec34/qc-trick.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Quake-C Specificacions  v1.0</title>
+<link rev="MADE" href="mailto:Olivier.Montanuy@wanadoo.fr">
+</head>  
+<body bgcolor="#FFFFFF"><div id="StayFocusd-infobar" style="display: none; top: 547px;">
+    <img src="chrome-extension://laankejkbhbdhmipfmgcngdelahlfoji/common/img/eye_19x19_red.png">
+    <span id="StayFocusd-infobar-msg"></span>
+    <span id="StayFocusd-infobar-links">
+        <a id="StayFocusd-infobar-never-show">hide forever</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a id="StayFocusd-infobar-hide">hide once</a>
+    </span>
+</div>
+
+<h1><font color="#007F00"><a name="QC-TRICK">10. Quake-C Tips and Tricks</a></font></h1>
+
+<h2><a name="QC-QUIRK">10.1 The quirks of Quake and Quake-C</a></h2> 
+
+<p>Here are some characteristics of Quake-C that you had better be aware of.
+</p>
+
+<h4>The names of variable and functions must be unique</h4>  
+
+<p> The names of functions, variables and fields must be unique.
+  For instance, you cannot define a variable with the same name as a field.
+  However, local variables can be defined more than once (they had better!).
+</p>
+
+<h4>Composition of function is not supported</h4>
+
+<p>Since all the functions use a single parameter marshaling 
+area, and a single <b>global</b> variable to store their reture result, 
+you should <b>NEVER</b> try to call a function within another function call.</p>
+<p>Example: printing the coordinate of entity <a href="http://www.gamers.org/dEngine/quake/spec/quake-spec34/qc-glob.htm#self" target="content">self</a>
+</p><pre>    sprintf(self, <b>vtos( self.origin )</b>);
+</pre>
+will fail miserably (sending the message somewhere in hell), so
+it should be replaced by:
+<pre>    <b>text</b> = vtos( self.origin );
+    sprintf(self, <b>text</b>);
+</pre>
+<p></p>
+
+<p>Unfortunately, this also applies to operators:
+</p><pre>   sum = anglestovec( 45) + anglestovec( 90);
+</pre>
+will fail an should be replaced by:
+<pre>   <b>sum</b> = anglestovec( 45);
+   sum = <b>sum</b> + anglestovec( 90);
+</pre>
+<p></p>
+
+<p>Actually, Quake-C is rather lame as a compiler, and you will probably
+make hundred of little mistakes like that, that the compiler will not warn
+you of. But remember Quake-C was built for "performance", not ease of use.
+And also that it wasn't designed by people from the MIT.
+Remember also that you got it for <b>free</b>... you can always
+get <b>gcc</b> (the Gnu C Compiler) for the same price ;-)
+</p>
+
+<h4>You cannot initialise variable with default values.</h4>
+
+<p>If you give a default value to a quake-C variable, this variable
+will be considered as a constant. And since the value of constants is not
+supposed to change, your program may not work properly after that.
+</p>
+
+<h4>Coordinates are relative to the world.</h4>
+
+<p>  All the geometry (coordinate positions, directions, angles) are relative to the
+  world. They are never relative to a given object. To know the direction
+  an object is facing, you have to require calculation of the <b>v_front</b>
+  vector (respectively <b>v_right</b> and <b>v_up</b> for the right, and the top).
+</p>
+
+
+
+
+<hr>
+
+<h2><a name="QC-FAQ">10.2 Frequently Asked Questions about Quake-C</a></h2>
+
+<h3>How do I change the viewpoint?</h3>
+
+<p>You would like that a given player sees through the eyes of another
+entity. This commonly happens at the end of the level (all players see
+through a camera), or when the player head is severed (gibbed), or when
+a player is invisible (he only exists as his eyes).</p>
+
+<p>But the example above work by changing the player entity, and what
+you want is probably just to see through a camera (Duke3D) or a missile
+(Descent).</p>
+
+<p>This operation is known in the Quake network protocol as a setview message. 
+But nowhere it's defined in Quake-C, and there's no function to change the 
+view port. So the solution is to encode a <a href="http://www.gamers.org/dEngine/quake/spec/quake-spec34/qc-net.htm#msg_setviewport" target="content">
+set view port </a> message, followed by a <a href="http://www.gamers.org/dEngine/quake/spec/quake-spec34/qc-net.htm#msg_setviewangles" target="content">
+set view angles</a> message (to take the orientation of the camera).
+</p>
+<p>This works fine, but if the entity you use as a camera was not declared to
+the client, then the view port will be set to <b>'0 0 0'</b>, which is usually 
+omewhere in the void. Hence the need to send an explicit update message.
+</p>
+<p>Also, the view might <b>not be updated correctly</b>, if the camera is not in the
+same area as the player (same potential visibility set, to be exact). That's
+because the Quake server only sends updates to entities that are visible to
+the player.
+</p>
+
+
+<h3>How do I teleport a player into another server</h3>
+
+<p><i>A trick by <a href="http://www.ecis.com/~tiger">Steven Lang</a> (tiger@ecis.com)</i></p>
+
+<p></p><pre>    // In the slipgate touch function
+    // other = entity that touched
+    if(other.classname == "player")
+      stuffcmd(other, "connect <i>server</i>.<i>address</i>\n");  // send command
+</pre>  
+ When the slipgate is touched, the entity jumps to another server.<p></p>
+
+<p>Trouble: the player stats and weapons won't be preserved, and the
+player would be dumped to the console if the other server was full
+or not available.<br>
+That's why John Carmack, will rewrite the code of Quake.exe to implement his
+<b>Quake World</b> proposal, and advanced server with all kinds of goodies... 
+permission lists, ability to block an IP, etc. (info from quake-c list).</p>
+
+
+<h3>How do I manipulate strings in Quake-C?</h3>
+
+<p>Well, you can have any kind of strings, so long as they can't be changed.
+<i>"In Ford we trust"</i> (Brave New World).
+</p><p>The Quake compiler only defines operations <b>=</b>, <b>==</b>, <b>!=</b> on strings.
+No concatenation is possible.
+</p>
+
+<h3>How to read string variables, or text messages?</h3>
+
+<p>Well, if you know, tell, that would make a nice addition to this specs.</p>
+
+<h3>How do I move an entity in Quake-C?</h3>
+
+<p>You have better not touch it's position, else some stuff in the C code
+might not be valid anymore. So you call the <b>setposition()</b> 
+built-in function.
+
+</p><h3>How to change the velocity of an entity (make it bounce off walls)?</h3>
+
+<p><i>Information by Greg Lewis.</i></p>
+
+<p>It seems that an entity's velocity can't be changed in the Touch function 
+of the entity. Making the calculations there will be of no use.<br>
+So just set <b>entity.movetype</b> to MOVETYPE_BOUNCE, <b>entity.nextthink</b>
+to 0.1 (to let it bounce off), and set <b>entity.think</b> to the name of
+a function that, when called 0.1 second later, will set <b>entity.velocity</b>
+to the right direction.
+</p>
+
+<h3>How to calculate the direction a player is facing?</h3>
+
+<p>Assuming the player is <a href="http://www.gamers.org/dEngine/quake/spec/quake-spec34/qc-glob.htm#self" target="content">, the entity field 
+self.</a><a href="http://www.gamers.org/dEngine/quake/spec/quake-spec34/qc-enty.htm#dot_angles" target="content">angles</a> contains the orientation angles
+of the player (as set by moving the mouse).
+</p>
+<p>Then the function <a href="http://www.gamers.org/dEngine/quake/spec/quake-spec34/qc-built.htm#makevectors" target="content">makeverctors</a>( self.angles)
+will calculate three vectors, that point in the direction the
+player is <a href="http://www.gamers.org/dEngine/quake/spec/quake-spec34/qc-built.htm#v_forward" target="content">facing</a>, but also to the 
+<a href="http://www.gamers.org/dEngine/quake/spec/quake-spec34/qc-built.htm#v_right" target="content">right</a> of the player (strafing direction)
+and to the direction the player is <a href="http://www.gamers.org/dEngine/quake/spec/quake-spec34/qc-built.htm#v_up" target="content">standing</a>. 
+</p>
+<p> Note that those vectors are normalised to 1, so if you want to
+know what lays 100 units in front of the player, use
+<tt>self.<a href="http://www.gamers.org/dEngine/quake/spec/quake-spec34/qc-enty.htm#dot_origin" target="content">origin</a> + 100 * <a href="http://www.gamers.org/dEngine/quake/spec/quake-spec34/qc-built.htm#v_forward" target="content">facing</a></tt>.
+</p>
+
+<h3>How to send a message to a player when he logs in?</h3>
+
+<p>It has been noticed that using a <a href="http://www.gamers.org/dEngine/quake/spec/quake-spec34/qc-built.htm#sprint" target="content">sprint</a>()
+in function <a href="http://www.gamers.org/dEngine/quake/spec/quake-spec34/client.htm#ClientConnect">ClientConnect</a>
+just plain doesn't send any message at all. Maybe the client is
+not ready to receive messages at this point.
+</p>
+<p>However, Doug Keenan (doug.keegan@tamu.edu) has reported he could
+send such a text message by putting the <a href="http://www.gamers.org/dEngine/quake/spec/quake-spec34/qc-built.htm#sprint" target="content">sprint</a>()
+close to the begining of the ClientConnect function. It doesn't
+work at the end, apparently.
+</p>
+
+
+<h3>How to...?</h3>
+
+<p>Another unanswered question? Just ask on the quake-c mailing list.</p>
+
+
+
+<hr>
+<h2><a name="QC-SUGG">10.3 Writing clean Quake-C code</a></h2>
+
+<p>Here are some <b>suggestions</b> that you should really consider
+when writing Quake-C code. Well, there are no obligations, but that
+would make life simpler for others when they read your code (and thus
+for you when you read theirs).</p>
+
+<p>I assume here that you want to develop code that others can re-use,
+or that can be mixed seamlessly with codes written by others.</p>
+<small>(If you are reinventing the whole world all by yourself, you hardly 
+need any help or counsels. By the way, the first command is <b>+light</b>).
+</small>
+
+<ol>
+<li> Please <b>put comments in your code</b>.<br>
+  <small>Of course, the real gurus don't need comments. They understand raw
+  Quake-C, even compiled. They can even imagine all the parts of your code
+  before they read them. Even before you write them. But actually, they seldom
+  read your code. Only normal people do.</small>
+</li><li> Please tag the <b>begining</b> and <b>end</b> of your modifications,
+  if you are fixing a code from someone else.<br>
+  Also put a date, and put a reason for the fix. Example:<br>
+  <pre>       <i>// Patch by Nezu The Unworthy  8/3/96</i> 
+       <i>// Gimme a chance to win a deathmatch</i>
+       if(self.name != "nezu")
+         self.frag = self.frag - 10;
+       <i>// Patch End</i>
+  </pre>
+</li><li> Each time you create a new function, a new variable or a new field, 
+     please give it a <b>name that will not conflict</b> with function or
+     variable defined by others.<br>
+     A rather sure way to do this is to prefix every name with some
+     abvreviated module name, or you initials, or whatever rare
+     combination of three or four letter. Example:
+     <pre>     void() NTU_think =  // Nezu The Unworthy starts thinking
+     {
+        self.skin = 1;   // turn red and boil
+     };
+     </pre>
+</li><li> Each time you implement some set of related functions, you should
+     <b>create a new Quake-C module</b>, and give it a name different
+     from the existing ones.<br>
+     Please do not use one of the module names used by id software, this 
+     would be confusing. Try to be original, else we might end-up with 
+     two hundred modules called <i>impulse.qc</i>.
+</li><li> When you want to distribute some modified Quake-C programs:
+     <ul>
+     <li> include a <b>file_id.diz</b> file explaining in 5 lines what
+          your patch does, and where it should be stored in the archives
+          (this file is to be read by system administrators)
+     </li><li> include a <b>readme.txt</b> file explaining in details what your 
+          patch does, how it does it, and what common files you had to modify.
+     </li><li> include the <b>.qc</b> modules that you created from scratch.
+     </li><li> For the modules you modified, please let them pass through the
+          utilities <b>diff</b> (see below), so that the original file can be 
+          patched the utility <b>patch</b>.
+          even if it has been modified since.
+     </li><li> Do not distribute modified <b>.qc</b> modules. Future versions of
+          Quake will contain different code, and all your work would then be lost.
+     </li></ul>     
+</li><li> You should compile and distribute a version of your code, as a single
+     <b>PROGS.DAT</b> file, to be used by those who just wanna have fun.
+     Don't forget them, they largely overnumber the people who directly deal 
+     with Quake-C.
+</li><li> Upload your Quake-C patches to the primary quake ftp site at 
+     <a href="ftp://ftp.cdrom.com/pub/idgames2/incoming">ftp.cdrom.com</a>.<br>
+     Maybe if it's good enough it will also appear in the
+     <a href="http://mfh.acaf.uab.edu/allen/">Quake-C code repository</a>.
+</li></ol>
+
+
+<h3>Using Diff and Patch</h3>
+
+<p><i>Information by Jeff Epler (jepler@cse.unl.edu)</i></p>
+
+<p> You can find a DOS version of 
+<a href="ftp://oak.oakland.edu/pub/simtelnet/gnu/v2gnu/dif271b.zip">diff</a>
+and <a href="ftp://oak.oakland.edu/pub/simtelnet/gnu/v2gnu/pat21b.zip">patch</a>
+on all the major ftp archives, for instance <b>Simtelnet</b> (mirrored at
+<a href="ftp://oak.oakland.edu/pub/simtelnet">ftp://oak.oakland.edu/pub/simtelnet</a>).
+</p>
+
+<p> For a Win32 (windows95 and NT) version, see
+<a href="ftp://ftp.cygnus.com/pub/gnu-win32/win32/i386/diffutils.zip">diffutils.zip</a>
+and <a href="ftp://ftp.cygnus.com/pub/gnu-win32/win32/i386/patch.zip">patch.zip</a>.
+</p>
+
+<p>The full documentation for diff and patch is available on 
+<a href="http://www.ai.mit.edu/!info/diff.info/!!first">www.ai.mit.edu</a>,
+but here are some shortened instructions:
+</p><pre>To make a diff:
+. start with yourdir/ with an entire working set of .qc files, and v101qc/
+with the virgin qc files from id.
+. diff -ur --new-file v101qc yourdir &gt; patchfil
+
+To patch with a diff:
+. copy everything in v101qc (or yourdir if you want to add these patches to
+your already-customized setup) to newdir
+. change to newdir
+. patch -p1 &lt; patchfil
+. Look for any "rejected" patches and apply them by hand using your
+favorite 2-window text editor.  These should be few or none if the author
+kept his changes well-structured or you patched from exactly the same
+source he diffed from.
+</pre>
+<p></p>
+
+
+  
+  
+  
+
+</body></html>
