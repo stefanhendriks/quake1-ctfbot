@@ -1,0 +1,41 @@
+	else if ((mname == "idctf1") || (mname == "ctf2m7"))
+	{
+		SpawnWaypointNum('-558.6 1294.1 168.0', 5, -1, us);
+		SpawnWaypointNum('-544.9 -587.5 168.0', 14, -1, us);
+		SpawnWaypointNum('-541.4 1748.4 360', 5, 0, us);
+		SpawnWaypointNum('-530.5 1531.4 360', 5, 1, us);
+		SpawnWaypointNum('-551.9 1096.8 168', 5, 2, us);
+		SpawnWaypointNum('-732.9 1098.7 168', 5, 3, us);
+		SpawnWaypointNum('-840 709.7 168', 5, 4, us);
+		SpawnWaypointNum('-565.9 759.2 168', 5, 5, us);
+		SpawnWaypointNum('-574.4 501.4 191', 5, 6, us);
+		SpawnWaypointNum('-579.1 264.2 191', 14, 6, us);
+		SpawnWaypointNum('-546 -788.8 360', 14, 1, us);
+		SpawnWaypointNum('-541.1 -394.9 168', 14, 2, us);
+		SpawnWaypointNum('-723.8 -408 168', 14, 3, us);
+		SpawnWaypointNum('-542.3 -979.2 360', 14, 0, us);
+		SpawnWaypointNum('-807.9 72.9 168', 14, 4, us);
+		SpawnWaypointNum('-586.2 33.1 175', 14, 5, us);
+		SpawnWaypointNum('-376.0 1590.1 168.0', -1, 0, us);
+		SpawnWaypointNum('-126.2 2544.6 360.0', -1, 5, us);
+		SpawnWaypointNum('-314.1 1963.9 232.0', -1, 1, us);
+		SpawnWaypointNum(' 41.0 1935.5 280.0', -1, 2, us);
+		SpawnWaypointNum(' 78.9 2217.6 280.0', -1, 3, us);
+		SpawnWaypointNum('-136.7 2192.2 280.0', -1, 4, us);
+		SpawnWaypointNum('-545.0 1962.2 340.0', -1, 0, us);
+		SpawnWaypointNum('-785.1 1961.2 340.0', -1, 1, us);
+		SpawnWaypointNum('-779.6 2155.9 340.0', -1, 2, us);
+		SpawnWaypointNum('-509.0 -1399.5 326.0', -1, 3, us);
+		SpawnWaypointNum('-510.4 2157.1 326.0', -1, 3, us);
+		SpawnWaypointNum('-713.9 -819.1 168.0', -1, 0, us);
+		SpawnWaypointNum('-362.2 -790.0 168.0', -1, 1, us);
+		SpawnWaypointNum('-320.3 -1186.8 232.0', -1, 2, us);
+		SpawnWaypointNum(' 66.8 -1199.9 280.0', -1, 3, us);
+		SpawnWaypointNum(' 56.0 -1420.2 280.0', -1, 4, us);
+		SpawnWaypointNum('-121.3 -1469.5 280.0', -1, 5, us);
+		SpawnWaypointNum('-124.4 -1788.6 360.0', -1, 6, us);
+		SpawnWaypointNum('-552.7 -1187.6 340.0', -1, 0, us);
+		SpawnWaypointNum('-769.2 -1182.1 340.0', -1, 1, us);
+		SpawnWaypointNum('-761.1 -1382.1 340.0', -1, 2, us);
+		return TRUE;
+	}

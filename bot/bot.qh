@@ -1,0 +1,227 @@
+//bot.qh
+//Copyright (C) 1998  Drew Davidson, Anthony J. Distler
+//
+//This program is free software; you can redistribute it and/or
+//modify it under the terms of the GNU General Public License
+//as published by the Free Software Foundation; either version 2
+//of the License, or (at your option) any later version.
+//
+//This program is distributed in the hope that it will be useful,
+//but WITHOUT ANY WARRANTY; without even the implied warranty of
+//MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//GNU General Public License for more details.
+//
+//You should have received a copy of the GNU General Public License
+//along with this program; if not, write to the Free Software
+//Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+
+
+//==============================================================================
+//==============================================================================
+// CTFBOT EXTRAS [[[
+entity() PlayerDropRune;
+void() RuneStatus;
+void () RuneThink;					
+// CTFBOT EXTRAS ]]]
+
+void() DetailedScoresBroadcast;
+void(entity requester) DetailedScores;
+void(entity requester, entity player) DetailedPlayerScores;
+
+//==============================================================================
+//==============================================================================
+void(entity item)BotEvade;
+float () Bot_BestWeapon;
+float(entity bot, entity item) IsGoodItem;
+entity(float radius) FindNearbyItem;
+entity () FindNearbyEnemy;
+void() BotJump;
+float() BotShouldJump;
+void() MoveBot;
+float(entity targ) EntityInFieldOfView;
+float() MaybeFight;
+void () MaybeChangeYaw;
+void(float perfect_accuracy) BotLeadTarget;
+void(float perfect_accuracy) BotFireWeapon;
+void() BotMoveTowardTarget;
+void(float change_yaw) BotMoveTowardGoal;
+void() ContinueFighting;
+void() BotPreThink;
+void() BotPostThink;
+void() BotThink;
+void() BotIsDead;
+void () BotSelfDeActivate;
+void () Bot_Precache;
+entity(entity bot) TeamCaptureSpawnBot;
+entity (string name, float botteam, float bskill) BotCreate; 
+void () BotRespawn;
+void (entity to) BotList;
+
+void () MoveWhileFiring;
+
+float(entity item) IsImmovableGettableItem;
+
+void () BotAnimationThink;
+
+void() Bot_WeaponFrame;
+float () CheckBotImpulseCommands;
+void () bot_pain;
+
+float () IsExactlyOnePlayer;
+
+void (string st) BotSay;
+
+void (entity player) BotSayEscort;
+void () BotSayDefense;
+void () BotSayDammit;
+void () BotSaySomething;
+
+void (float fteam) SpawnFlag;
+void () SpawnBaseStockpile;
+
+void () PrintEntityListBSP;
+void () PrintEntityListCode;
+
+void() DropDown;
+
+void (float make_visible) SetWaypointsVisible;
+void (float make_visible) SetDebugMarkersVisible;
+void (vector org) MoveDebugMarker;
+
+entity (float bskill) CreateRedBot;
+entity (float bskill) CreateBlueBot;
+void (float fteam) RemoveBestBot;
+
+void (float fteam) StartNewPath;
+void (vector org, float fteam) SpawnNextWaypoint;
+void () PrintWaypoints;
+entity (vector org, float fteam, float wpnum, float use_sprite) SpawnWaypointNum;
+void (vector org) SpawnDeathmatchStart;
+
+void () PrintCloseWaypoint;
+void (float fteam) ReportIn;
+
+void (float fteam) AllBotsAttack;
+void (float fteam) AllBotsDefend;
+void (float fteam) MoreBotsAttack;
+void (float fteam) MoreBotsDefend;
+void (float fteam) MoreBotsRoam;
+void () OrderCamping;
+void () OrderEscort;
+
+void(string mname)SpawnWaypointsForMap;
+
+void () SwitchBotNames;
+void (entity bot) RandomNormalName;
+
+//TONY REMOVED
+//
+void () InitCPU;
+//void () RecalcCPU;
+//void () IncreaseCPU;
+//void () DecreaseCPU;
+//void () IncreaseBotPing;
+//void () DecreaseBotPing;
+
+void () ToggleWaypoints;
+
+void () BroadcastMVP;
+void () ToggleAllConsoles;
+
+float() StepUpZ;
+
+void (float broadcst) PrintFragList;
+
+//TONY
+//REMOVED BOTCAM.QC
+//void (float force_update) SetPlayerViewPoint;
+//void () SetPlayerViewpointNow;
+//void()ToggleCamera;
+//void() WatchNextPlayerOrBot;
+//void () ToggleAutoCamera;
+//void () ToggleFOVControl;
+
+void () BotKeepTeamsEven;
+
+void () StartNewGeneralPath;
+void (vector org) SpawnNextGeneralWaypoint;
+
+entity(float dweapon, entity throwto) TossWeaponBackpack;
+void () OrderDropStuff;
+float (float enemy_base, float change_yaw) MoveTowardBase;
+void () SpawnEvenTeamEntity;
+
+float (float fteam) IsHumanOnTeam;
+
+void (float fteam) PrintTeamStatus;
+entity (entity head) FindNextPlayerOrBot;
+
+float (float fteam) TeamHasFlag;
+
+void () BotSayStart2;
+void (string st) BotSayMiddle;
+void () BotSayEnd;
+void () BotSayTeamStart2;
+void (string st) BotSayTeamMiddle;
+void () BotSayTeamEnd;
+
+void () RemoveClosestWaypoint;
+float() ShouldReleaseHook;
+
+void () SpawnFollowEntity;
+void (entity p) BPrintFrags;
+
+void (float f) dprintfloat;
+void (float f) bprintfloat;
+void (entity s, float f) sprintfloat;
+void (string st) sprint2;
+void (vector v) dprintvector;
+
+float () GetNumHumans;
+float (float fteam) GetNumPlayersOnTeam;
+float (float fteam) GetNumHumansOnTeam;
+//TONY
+//REMOVED
+//void () SpawnBotColorMapEntity;
+
+//void () InvasionSpawnBots;
+
+void () PrintWaypointList;
+
+void (float fteam) PlayFlagTakenSound;
+void (float fteam) PlayFlagCaptureSound;
+
+//TONY
+//REMOVED HOLO.QC
+//void(entity player) ActivateHolo;
+
+float (entity p) IsPlayerOrBot;
+
+void (vector org) spawn_tfog;
+float() crandom;
+void() BecomeExplosion;
+
+void() TeamFlagStatusReport;
+void (vector org, float timeout, float fteam) SpawnTempWaypoint;
+//TONY
+//THIS IS NEVER USED
+//void () FakeStatusBar;
+void () BlinkEnts;
+
+//TONY
+//REMOVED
+//void () DecreaseLight;
+//void () IncreaseLight;
+
+void (entity flag_carrier, entity throwto) TossFlag;
+void () OrderTossFlag;
+
+//TONY
+//REMOVED RADIO.QC
+//void () StartAttackSequence;
+//void () StopAttackSequence;
+//void (float force_update) PrepareAttackAnnouncements;
+
+void (entity p, float fteam) PrintTeamName;
+string (float fteam) GetTeamName;
+

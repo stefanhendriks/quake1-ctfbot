@@ -1,0 +1,41 @@
+	else if (mname == "ctf6")
+	{
+		SpawnWaypointNum('-1614.6 667.8 -886.0', 5, -1, us);
+		SpawnWaypointNum('-1605.2  84.1 -886.0', 5, -1, us);
+		SpawnWaypointNum('-432.7 -46.4 -283.0', 14, -1, us);
+		SpawnWaypointNum('-1883.1 876.7 -1175', 5, 4, us);
+		SpawnWaypointNum('-1890.4 1241.5 -1175', 5, 5, us);
+		SpawnWaypointNum('-1642.4 1243.7 -1175', 5, 6, us);
+		SpawnWaypointNum('-1536.1 1243.7 -1175', 5, 7, us);
+		SpawnWaypointNum('-1120.8 1240.1 -1175', 5, 8, us);
+		SpawnWaypointNum('-2175.1 241.4 -575', 5, 9, us);
+		SpawnWaypointNum('-2310.4 236.8 -575', 5, 10, us);
+		SpawnWaypointNum('-2313.2 -721.5 -492', 5, 11, us);
+		SpawnWaypointNum('-2044.9 -763.8 -492', 5, 12, us);
+		SpawnWaypointNum('-2051.4 -339.4 -398', 5, 13, us);
+		SpawnWaypointNum('-2046.3 -260.8 -398', 5, 14, us);
+		SpawnWaypointNum('-1985.9 -55.8 -398', 5, 15, us);
+		SpawnWaypointNum('-1442.8 -36 -328', 5, 16, us);
+		SpawnWaypointNum('-1441.8 64 -328', 5, 17, us);
+		SpawnWaypointNum('-1447.7 199.2 -328', 5, 18, us);
+		SpawnWaypointNum('-1171.7 273.8 -328', 14, 7, us);
+		SpawnWaypointNum('516.4 422.6 -36', 14, 2, us);
+		SpawnWaypointNum('-391.2 403 -283', 14, 3, us);
+		SpawnWaypointNum('-369.4 653.3 -283', 14, 4, us);
+		SpawnWaypointNum('-1171.4 684.8 -328', 14, 5, us);
+		SpawnWaypointNum('-1171.4 429.3 -328', 14, 6, us);
+		SpawnWaypointNum('-1755.3 724 -1175', 5, 3, us);
+		SpawnWaypointNum('-1061.6 707.8 -886', 5, 2, us);
+		SpawnWaypointNum('-1015.8 454.9 -886', 5, 1, us);
+		SpawnWaypointNum('515.7 -165.1 -36', 14, 1, us);
+		SpawnWaypointNum('-660.1 -748.9 -283.0', 14, 3, us);
+		SpawnWaypointNum('-786.0 -751.1 -283.0', 14, 4, us);
+		SpawnWaypointNum('-1248.8 -743.3 -344.8', 14, 5, us);
+		SpawnWaypointNum('-1723.0 -642.9 -260.0', 14, 6, us);
+		SpawnWaypointNum('-1842.0 -639.8 -260.0', 14, 7, us);
+		SpawnWaypointNum('-1851.9 -319.0 -260.0', 14, 8, us);
+		SpawnWaypointNum('-1117.8 -59.0 230.9', -1, 0, us);
+		SpawnWaypointNum('-355.7 -354.6 -283.0', 14, 1, us);
+		SpawnWaypointNum('-420.2 -757.9 -283.0', 14, 2, us);
+		return TRUE;
+	}

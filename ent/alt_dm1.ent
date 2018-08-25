@@ -1,0 +1,282 @@
+{
+"classname" "worldspawn"
+"message" "DM1: Place of Two Deaths\nModified for Left to Frag Alone"
+}
+{
+"classname" "info_player_deathmatch"
+"origin" "240 1152 24"
+}
+{
+"classname" "info_teleport_destination"
+"angle" "90"
+"light" "250"
+"targetname" "t1"
+"origin" "448 1028 16"
+}
+{
+"classname" "trigger_teleport"
+"spawnflags" "2"
+"model" "*3"
+"target" "t1"
+}
+{
+"classname" "item_health"
+"spawnflags" "2"
+"origin" "440 808 0"
+}
+{
+"classname" "item_health"
+"origin" "-296 696 -144"
+}
+{
+"classname" "item_health"
+"origin" "-264 696 -144"
+}
+{
+"classname" "item_shells"
+"origin" "-116 1160 -144"
+}
+{
+"classname" "item_rockets"
+"origin" "584 856 0"
+}
+{
+"classname" "item_shells"
+"origin" "632 856 0"
+}
+{
+"classname" "item_health"
+"origin" "904 1064 0"
+}
+{
+"classname" "item_health"
+"origin" "904 1032 0"
+}
+{
+"classname" "item_spikes"
+"origin" "-224 748 0"
+}
+{
+"classname" "item_health"
+"origin" "-672 1412 0"
+}
+{
+"classname" "item_health"
+"origin" "-672 1372 0"
+}
+{
+"classname" "item_health"
+"origin" "152 1272 0"
+}
+{
+"classname" "item_health"
+"origin" "200 1272 0"
+}
+{
+"classname" "item_shells"
+"origin" "304 1016 0"
+}
+{
+"classname" "info_player_deathmatch"
+"angle" "90"
+"origin" "448 1040 80"
+}
+{
+"classname" "info_player_deathmatch"
+"origin" "-560 768 24"
+}
+{
+"classname" "info_player_deathmatch"
+"angle" "90"
+"origin" "104 1392 24"
+}
+{
+"classname" "info_player_deathmatch"
+"angle" "45"
+"origin" "608 896 72"
+}
+{
+"classname" "info_player_deathmatch"
+"angle" "180"
+"origin" "280 1416 -120"
+}
+{
+"classname" "weapon_supershotgun"
+"origin" "256 1152 0"
+}
+{
+"classname" "item_armor2"
+"origin" "48 1152 16"
+}
+{
+"classname" "item_armor1"
+"origin" "-400 1112 -144"
+}
+{
+"classname" "item_rockets"
+"origin" "-392 1416 0"
+}
+{
+"classname" "weapon_supernailgun"
+"origin" "1088 704 48"
+}
+{
+"classname" "weapon_rocketlauncher"
+"angle" "180"
+"origin" "-312 1088 48"
+}
+{
+"classname" "item_shells"
+"origin" "-536 1000 0"
+}
+{
+"classname" "weapon_supernailgun"
+"origin" "-528 1392 0"
+}
+{
+"classname" "item_spikes"
+"origin" "472 1408 -144"
+}
+{
+"classname" "item_spikes"
+"origin" "472 1464 -144"
+}
+{
+"classname" "item_health"
+"origin" "432 1624 -144"
+}
+{
+"classname" "item_health"
+"origin" "384 1624 -144"
+}
+{
+"classname" "info_intermission"
+"angle" "180"
+"mangle" "0 0 0"
+"origin" "296 1152 200"
+}
+{
+"classname" "info_intermission"
+"mangle" "0 0 0"
+"origin" "432 896 120"
+}
+{
+"classname" "func_wall"
+"model" "*6"
+}
+{
+"classname" "func_train"
+"model" "*7"
+"speed" "200"
+"target" "tony3"
+"dmg" "2"
+}
+{
+"classname" "path_corner"
+"targetname" "tony3"
+"wait" "1"
+"target" "tony4"
+"origin" "-432 960 -146"
+}
+{
+"classname" "path_corner"
+"targetname" "tony4"
+"wait" "1"
+"target" "tony3"
+"origin" "-432 960 50"
+}
+{
+"classname" "info_player_deathmatch"
+"angle" "180"
+"origin" "464 808 24"
+}
+{
+"classname" "info_player_deathmatch"
+"angle" "140"
+"origin" "448 744 -112"
+}
+{
+"classname" "info_player_start"
+"angle" "180"
+"origin" "208 1152 64"
+}
+{
+"classname" "item_health"
+"origin" "904 1096 0"
+}
+{
+"classname" "item_health"
+"origin" "-232 696 -144"
+}
+{
+"classname" "item_spikes"
+"origin" "-544 1448 0"
+}
+{
+"classname" "item_spikes"
+"origin" "-544 1472 0"
+}
+{
+"classname" "item_flag_team1"
+"origin" "-672 1216 32"
+}
+{
+"classname" "info_player_team1"
+"origin" "-672 1360 32"
+}
+{
+"classname" "info_player_team1"
+"origin" "-672 1280 32"
+}
+{
+"classname" "info_player_team1"
+"angle" "90"
+"origin" "-672 976 16"
+}
+{
+"classname" "info_player_team1"
+"angle" "180"
+"origin" "-304 1216 96"
+}
+{
+"classname" "item_flag_team2"
+"origin" "1088 704 74"
+}
+{
+"classname" "info_player_team2"
+"angle" "180"
+"origin" "1088 845 74"
+}
+{
+"classname" "info_player_team2"
+"angle" "180"
+"origin" "1088 1009 74"
+}
+{
+"classname" "info_player_team2"
+"angle" "90"
+"origin" "952 704 74"
+}
+{
+"classname" "info_player_team2"
+"angle" "90"
+"origin" "749 704 42"
+}
+{
+"classname" "info_player_team2"
+"angle" "180"
+"origin" "1088 928 72"
+}
+{
+"classname" "info_player_team2"
+"angle" "90"
+"origin" "848 704 80"
+}
+{
+"classname" "info_player_team1"
+"origin" "-672 1472 40"
+}
+{
+"classname" "info_player_deathmatch"
+"origin" "-384 1424 24"
+}

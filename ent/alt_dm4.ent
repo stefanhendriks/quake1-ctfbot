@@ -1,0 +1,284 @@
+{
+"classname" "worldspawn"
+"message" "DM4: The Bad Place\nModified for Left to Frag Alone"
+}
+{
+"classname" "info_player_start"
+"angle" "90"
+"origin" "384 -960 32"
+}
+{
+"classname" "trigger_teleport"
+"spawnflags" "2"
+"target" "t1"
+"model" "*1"
+}
+{
+"classname" "info_teleport_destination"
+"angle" "135"
+"targetname" "t1"
+"origin" "464 -1008 16"
+}
+{
+"classname" "trigger_teleport"
+"spawnflags" "2"
+"target" "t2"
+"model" "*2"
+}
+{
+"classname" "info_teleport_destination"
+"angle" "270"
+"targetname" "t2"
+"origin" "624 96 -296"
+}
+{
+"classname" "trigger_teleport"
+"spawnflags" "2"
+"target" "t3"
+"model" "*3"
+}
+{
+"classname" "info_teleport_destination"
+"targetname" "t3"
+"origin" "-96 -240 -64"
+}
+{
+"classname" "trigger_teleport"
+"spawnflags" "2"
+"target" "t4"
+"model" "*4"
+}
+{
+"classname" "info_teleport_destination"
+"targetname" "t4"
+"origin" "432 -240 -296"
+}
+{
+"classname" "trigger_teleport"
+"spawnflags" "2"
+"target" "t5"
+"model" "*5"
+}
+{
+"classname" "info_teleport_destination"
+"angle" "180"
+"targetname" "t5"
+"origin" "1152 -592 0"
+}
+{
+"classname" "item_rockets"
+"origin" "-104 568 -320"
+}
+{
+"classname" "item_spikes"
+"origin" "-136 -528 -96"
+}
+{
+"classname" "item_shells"
+"origin" "360 -136 -320"
+}
+{
+"classname" "item_health"
+"origin" "-208 -456 -96"
+}
+{
+"classname" "item_health"
+"origin" "-208 -504 -96"
+}
+{
+"classname" "item_armor1"
+"origin" "712 72 -320"
+}
+{
+"classname" "item_health"
+"origin" "528 72 -320"
+}
+{
+"classname" "item_rockets"
+"origin" "440 -832 -128"
+}
+{
+"classname" "item_health"
+"origin" "440 -1008 -120"
+}
+{
+"classname" "item_health"
+"origin" "440 -968 -120"
+}
+{
+"classname" "item_health"
+"origin" "400 -1008 -120"
+}
+{
+"classname" "item_spikes"
+"origin" "208 -800 0"
+}
+{
+"classname" "item_armor2"
+"origin" "1136 -592 0"
+}
+{
+"classname" "item_spikes"
+"origin" "712 -864 -256"
+}
+{
+"classname" "item_spikes"
+"origin" "984 -624 -128"
+}
+{
+"classname" "item_health"
+"origin" "960 -464 -128"
+}
+{
+"classname" "item_health"
+"origin" "928 -464 -128"
+}
+{
+"classname" "item_armor1"
+"origin" "824 -848 -256"
+}
+{
+"classname" "item_spikes"
+"origin" "840 -584 0"
+}
+{
+"classname" "item_health"
+"origin" "496 -488 0"
+}
+{
+"classname" "info_player_deathmatch"
+"origin" "-64 -232 -72"
+}
+{
+"classname" "info_player_deathmatch"
+"origin" "272 -952 24"
+}
+{
+"classname" "info_player_deathmatch"
+"angle" "45"
+"origin" "112 -1136 -104"
+}
+{
+"classname" "info_player_deathmatch"
+"angle" "180"
+"origin" "784 -176 24"
+}
+{
+"classname" "item_armor1"
+"origin" "512 -112 -128"
+}
+{
+"classname" "item_rockets"
+"origin" "88 -776 -128"
+}
+{
+"classname" "item_shells"
+"origin" "88 -824 -128"
+}
+{
+"classname" "item_spikes"
+"origin" "88 -872 -128"
+}
+{
+"classname" "weapon_grenadelauncher"
+"origin" "200 -32 -128"
+}
+{
+"classname" "weapon_supernailgun"
+"origin" "224 -1088 -112"
+}
+{
+"classname" "info_player_team1"
+"angle" "90"
+"origin" "80 64 -288"
+}
+{
+"classname" "weapon_supernailgun"
+"origin" "352 -8 -320"
+}
+{
+"classname" "weapon_supershotgun"
+"origin" "328 -1032 -128"
+}
+{
+"classname" "weapon_rocketlauncher"
+"origin" "768 -880 -256"
+}
+{
+"classname" "info_intermission"
+"mangle" "20 225 0"
+"origin" "464 -112 48"
+}
+{
+"classname" "weapon_lightning"
+"origin" "528 -304 -128"
+}
+{
+"classname" "item_cells"
+"origin" "816 -192 0"
+}
+{
+"classname" "item_cells"
+"origin" "320 -448 -128"
+}
+{
+"classname" "item_cells"
+"origin" "320 -616 0"
+}
+{
+"classname" "item_health"
+"spawnflags" "2"
+"origin" "-40 568 -320"
+}
+{
+"classname" "weapon_rocketlauncher"
+"angle" "110"
+"origin" "80 64 -288"
+}
+{
+"classname" "item_flag_team1"
+"origin" "-58 524 -296"
+}
+{
+"classname" "info_player_team1"
+"angle" "270"
+"origin" "-64 512 -296"
+}
+{
+"classname" "info_player_team1"
+"angle" "90"
+"origin" "-197 59 -296"
+}
+{
+"classname" "info_player_team1"
+"angle" "90"
+"origin" "-40 -241 -296"
+}
+{
+"classname" "item_flag_team2"
+"origin" "992 -544 -104"
+}
+{
+"classname" "info_player_team2"
+"angle" "180"
+"origin" "996 -542 -104"
+}
+{
+"classname" "info_player_team2"
+"angle" "270"
+"origin" "795 -490 -104"
+}
+{
+"classname" "info_player_team2"
+"origin" "849 -591 24"
+}
+{
+"classname" "info_player_team2"
+"angle" "90"
+"origin" "776 -808 -232"
+}
+{
+"classname" "info_player_deathmatch"
+"angle" "225"
+"origin" "512 -96 -80"
+}

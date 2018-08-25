@@ -1,0 +1,40 @@
+	else if (mname == "ctf3m5")
+	{
+		SpawnWaypointNum('-398.2 -1773.6 -24.0', 5, -1, us);
+		SpawnWaypointNum('-957.0 -609.1 -24.0', 14, -1, us);
+		SpawnWaypointNum('-980.6 -1808.0 -24.0', 14, -1, us);
+		SpawnWaypointNum('-351.5 -528.0 -24.0', 5, -1, us);
+		SpawnWaypointNum('441.0 -1143.8 -312.0', 5, 6, us);
+		SpawnWaypointNum('-1810.7 -1851.1 -24.0', 14, 4, us);
+		SpawnWaypointNum('-604.9 -201.6 -168.0', -1, 2, us);
+		SpawnWaypointNum('-287.2 -1726.3 -24.0', 5, 1, us);
+		SpawnWaypointNum('451.8 -498.4 -24.0', 5, 4, us);
+		SpawnWaypointNum('0.4 -931.3 -312.0', 5, 8, us);
+		SpawnWaypointNum('458.8 -1138.4 -24.0', 5, 3, us);
+		SpawnWaypointNum('-129.1 -181.1 -24.0', -1, 1, us);
+		SpawnWaypointNum('-613.4 -1141.9 136.0', 5, 0, us);
+		SpawnWaypointNum('-312.3 -555.8 -24.0', 5, 1, us);
+		SpawnWaypointNum('-60.1 -1176.2 -24.0', 5, 2, us);
+		SpawnWaypointNum('455.0  29.3 -312.0', 5, 5, us);
+		SpawnWaypointNum('175.4 -1163.9 -312.0', 5, 7, us);
+		SpawnWaypointNum('-1057.6 -560.0 -24.0', 14, 1, us);
+		SpawnWaypointNum('47.1 -182.4 -24.0', -1, 0, us);
+		SpawnWaypointNum('-1374.9 -1422.5 -312.0', 14, 8, us);
+		SpawnWaypointNum('-1818.7 -2257.2 -312.0', 14, 5, us);
+		SpawnWaypointNum('-749.0 -1193.7 136.0', 14, 0, us);
+		SpawnWaypointNum('-185.3 -1121.9 -312.0', 5, 9, us);
+		SpawnWaypointNum('-740.3 -604.6 -264.0', -1, 3, us);
+		SpawnWaypointNum('-650.3 -1175.7 -408.0', 5, 10, us);
+		SpawnWaypointNum('-1293.7 -1178.6 -24.0', 14, 2, us);
+		SpawnWaypointNum('-1067.3 -1807.7 -24.0', 14, 1, us);
+		SpawnWaypointNum('-1799.9 -1177.0 -24.0', 14, 3, us);
+		SpawnWaypointNum('-755.0 -2119.9 -168.0', -1, 2, us);
+		SpawnWaypointNum('-638.5 -1730.0 -264.0', -1, 3, us);
+		SpawnWaypointNum('-1837.2 -1190.7 -312.0', 14, 6, us);
+		SpawnWaypointNum('-1586.1 -1186.9 -312.0', 14, 7, us);
+		SpawnWaypointNum('-1202.7 -1216.9 -312.0', 14, 9, us);
+		SpawnWaypointNum('-846.5 -1173.9 -408.0', 14, 10, us);
+		SpawnWaypointNum('-1486.5 -2107.7 -24.0', -1, 0, us);
+		SpawnWaypointNum('-1244.6 -2140.9 -24.0', -1, 1, us);
+		return TRUE;
+	}

@@ -1,0 +1,45 @@
+	else if (mname == "alt_e1m5")
+	{
+		SpawnWaypointNum('-952.4 2161.4 168.0', 5, -1, us);
+		SpawnWaypointNum('-228.4 2525.1 440.0', 14, -1, us);
+		SpawnWaypointNum('-1539.6 1442.9 168.0', 5, -1, us);
+		SpawnWaypointNum('-916.6 2456.6 184.0', 5, 2, us);
+		SpawnWaypointNum('-474.2 1448.8 168.0', 14, 7, us);
+		SpawnWaypointNum('-335.7 1953.4 232.0', 14, 5, us);
+		SpawnWaypointNum('-105.9 2531.4 360.0', 14, 1, us);
+		SpawnWaypointNum('-1309.2 1492.1 172.0', 5, 2, us);
+		SpawnWaypointNum('-1520.1 1466.9 168.0', 5, 1, us);
+		SpawnWaypointNum('-1539.8 2182.5 174.0', 5, 0, us);
+		SpawnWaypointNum('-481.8 2157.8 326.0', 5, 4, us);
+		SpawnWaypointNum('-1202.2 1668.8 172.0', 5, 3, us);
+		SpawnWaypointNum('-768.8 2148.2 344.0', 5, 5, us);
+		SpawnWaypointNum('-950.8 2164.2 168.0', 5, 1, us);
+		SpawnWaypointNum('143.6 1342.8 111.0', -1, 4, us);
+		SpawnWaypointNum('281.8 2549.2 440.0', 14, 0, us);
+		SpawnWaypointNum('-985.2 2167.9 168.0', 5, 1, us);
+		SpawnWaypointNum('-759.2 1528.4 168.0', 5, 8, us);
+		SpawnWaypointNum('-1182.1 1770.2 168.0', 5, 6, us);
+		SpawnWaypointNum('-536.6 1314.8 168.0', -1, 0, us);
+		SpawnWaypointNum('-545.3 2477.1 312.0', 5, 3, us);
+		SpawnWaypointNum('-775.8 1827.2 340.0', 5, 6, us);
+		SpawnWaypointNum('-766.2 1798.8 168.0', 5, 7, us);
+		SpawnWaypointNum('-554.2 733.9 168.0', -1, 4, us);
+		SpawnWaypointNum('-536.6 1144.7 168.0', -1, 1, us);
+		SpawnWaypointNum('-772.0 754.7 168.0', -1, 3, us);
+		SpawnWaypointNum('-786.8 1134.5 168.0', -1, 2, us);
+		SpawnWaypointNum('-139.0 2204.9 280.0', 14, 2, us);
+		SpawnWaypointNum('89.4 2245.0 280.0', 14, 3, us);
+		SpawnWaypointNum('45.3 1934.1 280.0', 14, 4, us);
+		SpawnWaypointNum('-336.9 1630.3 168.0', 14, 6, us);
+		SpawnWaypointNum('-560.2 1496.8 168.0', -1, 0, us);
+		SpawnWaypointNum('-597.5 518.6 191.0', -1, 5, us);
+		SpawnWaypointNum('-70.2 557.6 127.0', -1, 8, us);
+		SpawnWaypointNum('-204.0 1348.5  -8.0', -1, 1, us);
+		SpawnWaypointNum('-427.6 1290.4 168.0', -1, 0, us);
+		SpawnWaypointNum('160.0 1651.8  32.0', -1, 3, us);
+		SpawnWaypointNum('-141.7 1622.9  -8.0', -1, 2, us);
+		SpawnWaypointNum('-75.4 1101.1 111.0', -1, 6, us);
+		SpawnWaypointNum('102.1 1189.8 111.0', -1, 5, us);
+		SpawnWaypointNum('-88.3 888.3 127.0', -1, 7, us);
+		return TRUE;
+	}

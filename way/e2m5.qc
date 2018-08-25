@@ -1,0 +1,41 @@
+	else if (mname == "e2m5")
+	{
+		SpawnWaypointNum('452.5 429.8 -56', 5, 7, us);
+		SpawnWaypointNum('-48.1 -220.8 8', 5, 4, us);
+		SpawnWaypointNum('690.5 1407.7 -8', 5, 12, us);
+		SpawnWaypointNum('54.6 3001.5 -16', 14, 3, us);
+		SpawnWaypointNum('-400.9 -539.7 -152', 5, 3, us);
+		SpawnWaypointNum('-703.4 -549.7 -152', 5, 2, us);
+		SpawnWaypointNum('304.2 2068.8 72', 5, 16, us);
+		SpawnWaypointNum('-726.8 2940.9 -32', 14, 1, us);
+		SpawnWaypointNum('430.5 119.5 -8', 5, 6, us);
+		SpawnWaypointNum('503.9 1722.4 72', 5, 14, us);
+		SpawnWaypointNum('-769 -1186.4 -216', 5, 0, us);
+		SpawnWaypointNum('-709.2 -787.8 -152', 5, 1, us);
+		SpawnWaypointNum('481.3 1423.1 -8', 5, 13, us);
+		SpawnWaypointNum('28.1 129.7 40', 5, 5, us);
+		SpawnWaypointNum('214 440 -72', 5, 8, us);
+		SpawnWaypointNum('-51.3 2171.6 -208', 14, 7, us);
+		SpawnWaypointNum('73.8 2616.7 128', 14, 4, us);
+		SpawnWaypointNum('263.8 1095.1 -56', 5, 9, us);
+		SpawnWaypointNum('533.3 1116.5 40', 5, 10, us);
+		SpawnWaypointNum('806.9 1132.1 -8', 5, 11, us);
+		SpawnWaypointNum('524.4 2033.2 72', 5, 15, us);
+		SpawnWaypointNum('-255.6 2800.9 -208', 14, 3, us);
+		SpawnWaypointNum('-474.3 3021.1 -96', 14, 2, us);
+		SpawnWaypointNum('-267.8 2601.2 240', 14, 5, us);
+		SpawnWaypointNum('-254.1 2291.4 240', 14, 6, us);
+		SpawnWaypointNum('-1135.5 2957.7 -48', 14, 0, us);
+		SpawnWaypointNum('-250.3 2310 -208', 14, 6, us);
+		SpawnWaypointNum('-56.3 2252.8 248', 14, 7, us);
+		SpawnWaypointNum('-429.4 402.4 -56.0', -1, 2, us);
+		SpawnWaypointNum('189.3 859.6 -72.0', -1, 0, us);
+		SpawnWaypointNum('-351.5  64.0  -8.0', -1, 0, us);
+		SpawnWaypointNum('-423.5 199.9  -8.0', -1, 1, us);
+		SpawnWaypointNum('-264.2 2980.3 -96.0', -1, 0, us);
+		SpawnWaypointNum('-199.6 446.6 -56.0', -1, 3, us);
+		SpawnWaypointNum('191.8 547.5 -72.0', -1, 0, us);
+		SpawnWaypointNum('170.3 1864.4 200.0', -1, 0, us);
+		SpawnWaypointNum('103.9 1444.0  40.0', -1, 0, us);
+		return TRUE;
+	}

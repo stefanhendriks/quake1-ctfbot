@@ -1,0 +1,42 @@
+	else if (mname == "e1m4")
+	{
+		SpawnWaypointNum('898.3 2044.1 560', -1, 16, us);
+		SpawnWaypointNum('698.4 1573.7 360', -1, 19, us);
+		SpawnWaypointNum('720 2431.8 552', -1, 15, us);
+		SpawnWaypointNum('-250.7 2074.8 1256', 5, 1, us);
+		SpawnWaypointNum('685.2 2864 552', -1, 14, us);
+		SpawnWaypointNum('711.5 2317.3 960', -1, 13, us);
+		SpawnWaypointNum('1102.7 2312.4 960', -1, 12, us);
+		SpawnWaypointNum('162.7 1430.1 928', 5, 9, us);
+		SpawnWaypointNum('713.1 536.4 789', 14, 6, us);
+		SpawnWaypointNum('481.9 -579.3 856', -1, 10, us);
+		SpawnWaypointNum('1103 -481.9 1144', -1, 9, us);
+		SpawnWaypointNum('1047 -250.4 1176', -1, 8, us);
+		SpawnWaypointNum('1072 2534.9 960', -1, 11, us);
+		SpawnWaypointNum('-254.8 1800 1192', 5, 2, us);
+		SpawnWaypointNum('706.5 1381.3 952', -1, 1, us);
+		SpawnWaypointNum('1089.6 735.1 1424', 14, 1, us);
+		SpawnWaypointNum('697.2 641.8 1296', 14, 2, us);
+		SpawnWaypointNum('652.5 452 1296', 14, 3, us);
+		SpawnWaypointNum('357.1 165.2 912', 14, 4, us);
+		SpawnWaypointNum('713.1 273.2 912', 14, 5, us);
+		SpawnWaypointNum('702.9 693.2 846.6', 14, 7, us);
+		SpawnWaypointNum('-96 1635 1144', 5, 3, us);
+		SpawnWaypointNum('-241.5 1472 1096', 5, 4, us);
+		SpawnWaypointNum('-416 1641.6 1016', 5, 5, us);
+		SpawnWaypointNum('-256.3 1800 952', 5, 6, us);
+		SpawnWaypointNum('-131.3 1637.7 920', 5, 7, us);
+		SpawnWaypointNum('692.9 1084.1 360', -1, 20, us);
+		SpawnWaypointNum('287.3 2301.4 960', -1, 10, us);
+		SpawnWaypointNum('280.5 2022.7 960', -1, 9, us);
+		SpawnWaypointNum('42.2 1612.9 920', 5, 8, us);
+		SpawnWaypointNum('712.4 1801.2 560', -1, 18, us);
+		SpawnWaypointNum('696.1 2037.2 560', -1, 17, us);
+		SpawnWaypointNum('697.5 -215.5 1288', -1, 7, us);
+		SpawnWaypointNum('1037.5 -530.3 856.0', -1, 2, us);
+		SpawnWaypointNum('704.9 -67.6 920.0', -1, 0, us);
+		SpawnWaypointNum('1036.2 -92.8 920.0', -1, 1, us);
+		SpawnWaypointNum('712.6 1847.7 968.0', -1, 2, us);
+		SpawnWaypointNum('720.3 1958.1 968.0', -1, 3, us);
+		return TRUE;
+	}

@@ -1,0 +1,69 @@
+//MultiWeapon copyright 1997 Wes Morrison
+//
+//This program is free software; you can redistribute it and/or
+//modify it under the terms of the GNU General Public License
+//as published by the Free Software Foundation; either version 2
+//of the License, or (at your option) any later version.
+//
+//This program is distributed in the hope that it will be useful,
+//but WITHOUT ANY WARRANTY; without even the implied warranty of
+//MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//GNU General Public License for more details.
+//
+//You should have received a copy of the GNU General Public License
+//along with this program; if not, write to the Free Software
+//Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+
+
+// MultiWeapon copyright 1997 Wes Morrison
+
+// Defs file for multiwep.qc
+
+// Used to store the indexes of all the player models, one for each weapon.
+// modelindex_player is also used, but that is already defined by standard QC.
+float modelindex_pl_shot1;
+float modelindex_pl_shot2;
+float modelindex_pl_nail1;
+float modelindex_pl_nail2;
+float modelindex_pl_rock1;
+float modelindex_pl_rock2;
+float modelindex_pl_light;
+// If new player weapon models are created, add new floats here to hold modelindexes
+
+//tony
+float modelindex_pl2shot1;
+float modelindex_pl2shot2;
+float modelindex_pl2nail1;
+float modelindex_pl2nail2;
+float modelindex_pl2rock1;
+float modelindex_pl2rock2;
+float modelindex_pl2light;
+
+float modelindex_pl3shot1;
+float modelindex_pl3shot2;
+float modelindex_pl3nail1;
+float modelindex_pl3nail2;
+float modelindex_pl3rock1;
+float modelindex_pl3rock2;
+float modelindex_pl3light;
+
+float modelindex_pl4shot1;
+float modelindex_pl4shot2;
+float modelindex_pl4nail1;
+float modelindex_pl4nail2;
+float modelindex_pl4rock1;
+float modelindex_pl4rock2;
+float modelindex_pl4light;
+
+
+// When weapon is changed, this entity field is set. Then, if not invisible,
+// player's .modelindex is set to .modelindex_thisplayer. When invisiblity
+// wears off, player's .modelindex is set to .modelindex_thisplayer. This
+// is so the correct model can be restored when invisibility wears off. Other
+// patches that change the player's model, take note.
+.float modelindex_thisplayer;
+
+// Prototypes
+void() MultiWeapon_PreCache;
+void() set_player_modelindexes;
+void() set_player_weapon;

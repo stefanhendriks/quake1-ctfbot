@@ -1,0 +1,53 @@
+
+	else if (mname == "realm")
+	{
+		SpawnWaypointNum('-111.5  10.7 -72.0', 5, 0, us);
+		SpawnWaypointNum('1465.6 -222.8 -136.0', 14, 3, us);
+		SpawnWaypointNum('-80.7 -42.6 184.0', 5, 6, us);
+		SpawnWaypointNum('1263.2   3.8 -132.0', 14, 2, us);
+		SpawnWaypointNum('246.1 374.8  24.0', 5, 7, us);
+		SpawnWaypointNum('531.1 -57.2 -136.0', 5, 2, us);
+		SpawnWaypointNum('45.2 -242.0 104.0', 5, 11, us);
+		SpawnWaypointNum('-241.7 434.9  24.0', 5, 6, us);
+		SpawnWaypointNum('-216.4 190.9   8.0', 5, 5, us);
+		SpawnWaypointNum('-103.3 -768.0  40.0', 5, 12, us);
+		SpawnWaypointNum('271.2  -0.4 -72.0', 5, 1, us);
+		SpawnWaypointNum('-48.0 -422.6 168.0', 5, 11, us);
+		SpawnWaypointNum('-562.7 415.6  24.0', 5, 7, us);
+		SpawnWaypointNum('290.8 -216.6 -136.0', 5, 3, us);
+		SpawnWaypointNum('-240.0 -219.6 -152.0', 5, 4, us);
+		SpawnWaypointNum('45.9 -599.2 -24.0', 5, 12, us);
+		SpawnWaypointNum('-291.8  25.8 216.0', 5, 9, us);
+		SpawnWaypointNum('-571.0  42.2 184.0', 5, 8, us);
+		SpawnWaypointNum('-273.9 -269.3 216.0', 5, 10, us);
+		SpawnWaypointNum('2018.5 423.6  24.0', 14, 6, us);
+		SpawnWaypointNum('929.9 720.2  72.0', 5, 10, us);
+		SpawnWaypointNum('-266.6 -410.8 216.0', 5, 10, us);
+		SpawnWaypointNum('549.7 724.0  76.0', 5, 9, us);
+		SpawnWaypointNum('501.6 -743.0 -56.0', 5, 13, us);
+		SpawnWaypointNum('1588.4 412.8  24.0', 14, 7, us);
+		SpawnWaypointNum('443.4 -567.6 -56.0', 5, 13, us);
+		SpawnWaypointNum('235.7 722.4  24.0', 5, 8, us);
+		SpawnWaypointNum('1904.0 -13.5 -72.0', 14, 0, us);
+		SpawnWaypointNum('2353.5  11.9 184.0', 14, 8, us);
+		SpawnWaypointNum('1290.7 -743.1 -56.0', 14, 14, us);
+		SpawnWaypointNum('1850.3 -760.3  40.0', 14, 12, us);
+		SpawnWaypointNum('1521.5 -743.1 -40.0', 14, 13, us);
+		SpawnWaypointNum('2032.0 -214.3 -152.0', 14, 4, us);
+		SpawnWaypointNum('1524.6  16.1 -72.0', 14, 1, us);
+		SpawnWaypointNum('2066.3  64.0 216.0', 14, 9, us);
+		SpawnWaypointNum('2053.8 -422.0 216.0', 14, 10, us);
+		SpawnWaypointNum('2013.1 221.7  24.0', 14, 5, us);
+		SpawnWaypointNum('1563.9 718.7  24.0', 14, 8, us);
+		SpawnWaypointNum('1278.7 -573.5 -56.0', 14, 14, us);
+		SpawnWaypointNum('1137.7 706.7  76.0', 14, 10, us);
+		SpawnWaypointNum('1280.1 725.4  72.0', 14, 9, us);
+		SpawnWaypointNum('1871.4 -43.8 184.0', 14, 6, us);
+		SpawnWaypointNum('2370.1 412.9  24.0', 14, 7, us);
+		SpawnWaypointNum('1840.0 -422.8 168.0', 14, 11, us);
+		SpawnWaypointNum('2062.4 -249.0 216.0', 14, 10, us);
+		SpawnWaypointNum('1425.8 -608.0 -40.0', 14, 13, us);
+		SpawnWaypointNum('1762.1 -567.5 -24.0', 14, 12, us);
+		SpawnWaypointNum('1743.3 -239.7 104.0', 14, 11, us);
+		return TRUE;
+	}
