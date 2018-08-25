@@ -18,6 +18,7 @@ You need to install it from disk, works like a charm.
 Make sure
 
 - you have unpacked the `pak1.pak` and `pak0.pak` files in the `ctfbot` folder
+  - you can use [Pak Explorer](http://www.quaketerminus.com/tools.shtml) for this.
 - after unpacking, remove the `pak1.pak` and `pak0.pak` files.
 
 From this point onward you basically have unpacked files, no .pak files lingering around.
