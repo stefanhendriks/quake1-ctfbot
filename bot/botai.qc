@@ -176,7 +176,7 @@ float (entity targ) BotCanSeePlayer =
 
 	// don't get random vector if partially in water, because
 	// this can cause bots to not notice players partially
-	// in the water water....
+	// in the water....
 	// only use random vector when totally in or totally out
 	// of water
 	if ((targ.waterlevel == 0) || (targ.waterlevel == 3))

@@ -268,6 +268,7 @@ local float rng, good_grenade_range, safe_dist, bestw, goodzrange;
 	else
 		return IT_AXE;
 };
+
 //=============================================================
 //=============================================================
 float () IsExactlyOnePlayer =
