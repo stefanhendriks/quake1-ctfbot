@@ -1,0 +1,1136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0044)http://ouns.nexuizninjaz.com/dev_quakec.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr"><!-- Mirrored from /dev:quakec by HTTrack Website Copier/3.x [XR&CO'2010], Fri, 29 Jul 2011 07:22:52 GMT --><!-- Added by HTTrack --><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><!-- /Added by HTTrack -->
+
+  
+  <title>
+    QuakeC    [OUNS]
+  </title>
+
+  <meta name="generator" content="DokuWiki Release 2009-12-25c &quot;Lemming&quot;">
+<meta name="robots" content="index,follow">
+<meta name="date" content="2009-06-01T01:40:08+0200">
+<meta name="keywords" content="dev,quakec">
+<link rel="search" type="application/opensearchdescription+xml" href="http://ouns.nexuizninjaz.com/lib/exe/opensearch.php" title="OUNS">
+<link rel="start" href="http://ouns.nexuizninjaz.com/index.html">
+<link rel="contents" href="http://ouns.nexuizninjaz.com/dev:quakec?do=index" title="Index">
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="http://ouns.nexuizninjaz.com/feed.php">
+<link rel="alternate" type="application/rss+xml" title="Current Namespace" href="http://ouns.nexuizninjaz.com/feed.php?mode=list&amp;ns=dev">
+<link rel="alternate" type="text/html" title="Plain HTML" href="http://ouns.nexuizninjaz.com/_export/xhtml/dev:quakec">
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="http://ouns.nexuizninjaz.com/_export/raw/dev:quakec">
+<link rel="canonical" href="http://ouns.nexuizninjaz.com/dev_quakec.html">
+<link rel="stylesheet" media="all" type="text/css" href="./quakec_reference_files/css.css">
+<link rel="stylesheet" media="screen" type="text/css" href="./quakec_reference_files/css-2.css">
+<link rel="stylesheet" media="print" type="text/css" href="./quakec_reference_files/css-3.css">
+<script type="text/javascript" charset="utf-8"><!--//--><![CDATA[//><!--
+var NS='dev';var JSINFO = {"id":"dev:quakec","namespace":"dev"};
+//--><!]]></script>
+<script type="text/javascript" charset="utf-8" src="./quakec_reference_files/js.php"></script><script type="text/javascript" src="./quakec_reference_files/e.js"></script>
+
+  <link rel="shortcut icon" href="http://ouns.nexuizninjaz.com/lib/tpl/sidebar/images/favicon.ico">
+
+  </head>
+
+<body><div id="StayFocusd-infobar" style="display: none; top: 1975px;">
+    <img src="chrome-extension://laankejkbhbdhmipfmgcngdelahlfoji/common/img/eye_19x19_red.png">
+    <span id="StayFocusd-infobar-msg"></span>
+    <span id="StayFocusd-infobar-links">
+        <a id="StayFocusd-infobar-never-show">hide forever</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a id="StayFocusd-infobar-hide">hide once</a>
+    </span>
+</div>
+<div class="dokuwiki">
+  
+  <div class="stylehead">
+
+    <div class="header">
+      <div class="logo">
+        <a href="http://ouns.nexuizninjaz.com/index.html" name="dokuwiki__top" id="dokuwiki__top" accesskey="h" title="[ALT+H]">OUNS</a>      </div>
+      <div class="tagline">
+               </div>
+      <div class="pagename">
+        [[<a href="http://ouns.nexuizninjaz.com/dev:quakec?do=backlink">dev:quakec</a>]]
+      </div>
+
+      <div class="clearer"></div>
+    </div>
+
+    <div class="headerinc">
+<strong>This wiki is static and therefore read-only as of August 2011. <a href="http://ouns.nexuizninjaz.com/readonly.html">More information here.</a></strong>
+<br>
+Hosted by <a href="http://nexuizninjaz.com/">NexuizNinjaz.com</a>
+</div>
+
+    <div class="bar" id="bar__top">
+      <div class="bar-left" id="bar__topleft">
+                <a href="http://ouns.nexuizninjaz.com/dev_quakec-revisions.html?do=revisions" class="action revisions" accesskey="o" rel="nofollow">Old revisions</a>      </div>
+
+
+
+      <div class="clearer"></div>
+    </div>
+
+    
+        <div class="breadcrumbs">
+      <span class="bchead">You are here: </span><a href="http://ouns.nexuizninjaz.com/start.html" title="start">OUNS</a> » <a href="http://ouns.nexuizninjaz.com/dev_start.html" title="dev:start" class="wikilink2" rel="nofollow">dev</a> » <a href="http://ouns.nexuizninjaz.com/dev_quakec.html" title="dev:quakec">QuakeC</a>    </div>
+    
+  </div>
+  
+  
+  <div id="sidebar">
+<p>
+This is the <a href="http://ouns.nexuizninjaz.com/sidebar.html" class="wikilink1" title="sidebar">sidebar</a><br>
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong><a href="http://ouns.nexuizninjaz.com/start.html" class="wikilink1" title="start">OUNS</a></strong></div>
+</li>
+<li class="level1"><div class="li"> <strong><a href="http://ouns.nexuizninjaz.com/wiki_irc_start.html" class="wikilink1" title="wiki:irc:start">OUNS IRC</a></strong></div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> The community:</div>
+<ul>
+<li class="level2"><div class="li"> <strong><a href="http://ouns.nexuizninjaz.com/player_start.html" class="wikilink1" title="player:start">Players</a></strong></div>
+</li>
+<li class="level2"><div class="li"> <strong><a href="http://ouns.nexuizninjaz.com/clan_start.html" class="wikilink1" title="clan:start">Clans</a></strong></div>
+</li>
+<li class="level2"><div class="li"> <strong><a href="http://ouns.nexuizninjaz.com/misc_irc.html" class="wikilink1" title="misc:irc">IRC Channels</a></strong></div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> The game:</div>
+<ul>
+<li class="level2"><div class="li"> <strong><a href="http://ouns.nexuizninjaz.com/game_tips.html" class="wikilink1" title="game:tips">Gameplay Tips</a></strong></div>
+</li>
+<li class="level2"><div class="li"> <strong><a href="http://ouns.nexuizninjaz.com/server_start.html" class="wikilink1" title="server:start">Nexuiz Servers</a></strong></div>
+</li>
+<li class="level2"><div class="li"> <strong><a href="http://ouns.nexuizninjaz.com/model_start.html" class="wikilink1" title="model:start">Player Models</a></strong></div>
+</li>
+<li class="level2"><div class="li"> <strong><a href="http://ouns.nexuizninjaz.com/item_weapons.html" class="wikilink1" title="item:weapons">Weapons</a></strong></div>
+</li>
+<li class="level2"><div class="li"> <strong><a href="http://ouns.nexuizninjaz.com/game_start.html" class="wikilink1" title="game:start">Gametypes</a></strong></div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> The <strong><a href="http://ouns.nexuizninjaz.com/tech_start.html" class="wikilink1" title="tech:start">technical stuff</a></strong>:</div>
+<ul>
+<li class="level2"><div class="li"> <strong><a href="http://ouns.nexuizninjaz.com/tech_cvar_list.html" class="wikilink1" title="tech:cvar_list">Cvar list</a></strong></div>
+</li>
+<li class="level2"><div class="li"> <strong><a href="http://ouns.nexuizninjaz.com/tech_cmd_list.html" class="wikilink1" title="tech:cmd_list">Command list</a></strong></div>
+</li>
+<li class="level2"><div class="li"> <strong><a href="http://ouns.nexuizninjaz.com/tech_impulse.html" class="wikilink1" title="tech:impulse">Impulse list</a></strong></div>
+</li>
+<li class="level2"><div class="li"> <strong><a href="http://toolz.nexuizninjaz.com/cvar" class="urlextern" title="http://toolz.nexuizninjaz.com/cvar" rel="nofollow">cvar/cmd quick search</a></strong></div>
+</li>
+<li class="level2"><div class="li"> <strong><a href="http://ouns.nexuizninjaz.com/tech_cheats.html" class="wikilink1" title="tech:cheats">"Cheats"</a></strong></div>
+</li>
+<li class="level2"><div class="li"> <strong><a href="http://ouns.nexuizninjaz.com/tech_console.html" class="wikilink1" title="tech:console">The console</a></strong></div>
+</li>
+<li class="level2"><div class="li"> <strong><a href="http://ouns.nexuizninjaz.com/tech_advanced_console.html" class="wikilink1" title="tech:advanced_console">Advanced console usage</a></strong></div>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> Development/Editing:</div>
+<ul>
+<li class="level2"><div class="li"> <strong><a href="http://ouns.nexuizninjaz.com/dev_howto.html" class="wikilink1" title="dev:howto">Development/Editing HowTo's</a></strong></div>
+</li>
+<li class="level2"><div class="li"> <strong><a href="http://ouns.nexuizninjaz.com/dev_repos.html" class="wikilink1" title="dev:repos">SVN repositories</a></strong></div>
+</li>
+<li class="level2"><div class="li"> <strong><a href="http://ouns.nexuizninjaz.com/dev_programming_introduction.html" class="wikilink1" title="dev:programming_introduction">Nexuiz Programming Introduction</a></strong></div>
+</li>
+<li class="level2"><div class="li"> <strong><span class="curid"><a href="http://ouns.nexuizninjaz.com/dev_quakec.html" class="wikilink1" title="dev:quakec">QuakeC guide</a></span></strong></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> The wiki:</div>
+<ul>
+<li class="level2"><div class="li"> <strong><em class="u"><a href="http://ouns.nexuizninjaz.com/wiki_todo.html" class="wikilink1" title="wiki:todo">ToDo</a></em></strong></div>
+</li>
+<li class="level2"><div class="li"> Page creation helpers:</div>
+<ul>
+<li class="level3"><div class="li"> <strong><a href="http://ouns.nexuizninjaz.com/wiki_syntax.html" class="wikilink1" title="wiki:syntax">Syntax</a></strong></div>
+</li>
+<li class="level3"><div class="li"> <strong><a href="http://ouns.nexuizninjaz.com/wiki_linklist.html" class="wikilink1" title="wiki:linklist">Making links</a></strong></div>
+</li>
+</ul>
+</li>
+<li class="level2"><div class="li"> Support:</div>
+<ul>
+<li class="level3"><div class="li"> <strong><a href="http://ouns.nexuizninjaz.com/wiki_help.html" class="wikilink1" title="wiki:help">Help</a></strong></div>
+</li>
+<li class="level3"><div class="li"> <strong><a href="http://ouns.nexuizninjaz.com/wiki_faq.html" class="wikilink1" title="wiki:faq">FAQ</a></strong></div>
+</li>
+</ul>
+</li>
+<li class="level2"><div class="li"> <strong><a href="http://ouns.nexuizninjaz.com/wiki_orphanwanted.html" class="wikilink1" title="wiki:orphanwanted">Orphan/Wanted pages</a></strong></div>
+</li>
+</ul>
+</li>
+</ul>
+
+<!-- cachefile /srv/http/up/ouns.nexuizninjaz.com/data/cache/2/2784df5617bb754545a3d58a8c7bb37b.xhtml used -->
+</div>    <div class="page_with_sidebar">
+      <!-- wikipage start -->
+    <!-- TOC START -->
+<div class="toc">
+<div class="tocheader toctoggle" id="toc__header" style="cursor: pointer;"><span id="toc__toggle" class="toc_close" style="cursor: pointer;"><span>−</span></span>Table of Contents</div>
+<div id="toc__inside">
+
+<ul class="toc">
+<li class="level1"><div class="li"><span class="li"><a href="http://ouns.nexuizninjaz.com/dev_quakec.html#quakec" class="toc">QuakeC</a></span></div>
+<ul class="toc">
+<li class="level2"><div class="li"><span class="li"><a href="http://ouns.nexuizninjaz.com/dev_quakec.html#example_code" class="toc">Example code</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="http://ouns.nexuizninjaz.com/dev_quakec.html#other_resources" class="toc">Other resources</a></span></div></li>
+<li class="level2"><div class="li"><span class="li"><a href="http://ouns.nexuizninjaz.com/dev_quakec.html#variables" class="toc">Variables</a></span></div>
+<ul class="toc">
+<li class="level3"><div class="li"><span class="li"><a href="http://ouns.nexuizninjaz.com/dev_quakec.html#declaring" class="toc">Declaring</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="http://ouns.nexuizninjaz.com/dev_quakec.html#scope" class="toc">Scope</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="http://ouns.nexuizninjaz.com/dev_quakec.html#types" class="toc">Types</a></span></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><span class="li"><a href="http://ouns.nexuizninjaz.com/dev_quakec.html#peculiar_language_constructs" class="toc">Peculiar language constructs</a></span></div>
+<ul class="toc">
+<li class="level3"><div class="li"><span class="li"><a href="http://ouns.nexuizninjaz.com/dev_quakec.html#if_not" class="toc">if not</a></span></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><span class="li"><a href="http://ouns.nexuizninjaz.com/dev_quakec.html#common_patterns" class="toc">Common patterns</a></span></div>
+<ul class="toc">
+<li class="level3"><div class="li"><span class="li"><a href="http://ouns.nexuizninjaz.com/dev_quakec.html#classes_in_quake" class="toc">Classes in Quake</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="http://ouns.nexuizninjaz.com/dev_quakec.html#think_functions" class="toc">Think functions</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="http://ouns.nexuizninjaz.com/dev_quakec.html#find_loops" class="toc">Find loops</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="http://ouns.nexuizninjaz.com/dev_quakec.html#linked_lists" class="toc">Linked lists</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="http://ouns.nexuizninjaz.com/dev_quakec.html#error_handling" class="toc">Error handling</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="http://ouns.nexuizninjaz.com/dev_quakec.html#target_and_targetname" class="toc">target and targetname</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="http://ouns.nexuizninjaz.com/dev_quakec.html#the_enemy_field_and_its_friends" class="toc">the enemy field and its friends</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="http://ouns.nexuizninjaz.com/dev_quakec.html#if-chains" class="toc">if-chains</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="http://ouns.nexuizninjaz.com/dev_quakec.html#tracing" class="toc">Tracing</a></span></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><span class="li"><a href="http://ouns.nexuizninjaz.com/dev_quakec.html#pitfalls_compiler_bugs" class="toc">Pitfalls, compiler bugs</a></span></div>
+<ul class="toc">
+<li class="level3"><div class="li"><span class="li"><a href="http://ouns.nexuizninjaz.com/dev_quakec.html#complex_operators" class="toc">complex operators</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="http://ouns.nexuizninjaz.com/dev_quakec.html#functions_vs_arrays" class="toc">functions vs arrays</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="http://ouns.nexuizninjaz.com/dev_quakec.html#vectoangles_does_not_match_makevectors" class="toc">vectoangles does not match makevectors</a></span></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><span class="li"><a href="http://ouns.nexuizninjaz.com/dev_quakec.html#entry_points" class="toc">Entry points</a></span></div></li></ul>
+</li></ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1><a name="quakec" id="quakec">QuakeC</a></h1>
+<div class="level1">
+
+<p>
+<br>QuakeC is a very simplified dialect of the well-known C programming language, as used by Quake. Nexuiz uses the FTEQCC dialect of QuakeC, so only this one will be described (as well as some common extensions among Quake engines).<br>
+</p>
+
+</div>
+
+<h2><a name="example_code" id="example_code">Example code</a></h2>
+<div class="level2">
+
+<p>
+<br>To see what QuakeC looks like, here is an example:<br>
+</p>
+<pre class="code">// needed declarations:
+float vlen(vector v) = #12;
+entity nextent(entity e) = #47;
+.string classname;
+.vector origin;
+// ...
+entity findchain(.string fld, string match)
+{
+  entity first, prev;
+  entity e;
+  first = prev = world;
+  for(e = world; (e = nextent(e)); ++e)
+    if(e.fld == match)
+    {
+      e.chain = world;
+      if(prev)
+        prev.chain = e;
+      else
+        first = e;
+      prev = e;
+    }
+  return first;
+}
+// ...
+entity findnearestspawn(vector v)
+{
+  entity nearest;
+  entity e;
+  for(e = findchain(classname, "info_player_deathmatch"); e; e = e.chain)
+    if(!nearest)
+      nearest = e;
+    else if(vlen(e.origin - v) &lt; vlen(nearest.origin - v))
+      nearest = e;
+  return nearest;
+}</pre>
+
+<p>
+(Note: <em>findchain</em> is implemented in QuakeC for demonstration purposes only so one can see how to build a linked list, as this function is already built in to the engine and can be used directly)
+</p>
+
+</div>
+
+<h2><a name="other_resources" id="other_resources">Other resources</a></h2>
+<div class="level2">
+
+<p>
+<br>Here is a forum on Inside3D where you can read more about QuakeC and ask questions.
+</p>
+<ul>
+<li class="level1"><div class="li"> QuakeC Forum on Inside3D: <a href="http://forums.inside3d.com/viewforum.php?f=2" class="urlextern" title="http://forums.inside3d.com/viewforum.php?f=2" rel="nofollow">http://forums.inside3d.com/viewforum.php?f=2</a></div>
+</li>
+<li class="level1"><div class="li"> QC Tutorial for Absolute Beginners: <a href="http://forums.inside3d.com/viewtopic.php?t=1286" class="urlextern" title="http://forums.inside3d.com/viewtopic.php?t=1286" rel="nofollow">http://forums.inside3d.com/viewtopic.php?t=1286</a></div>
+</li>
+</ul>
+
+<p>
+<br>For available functions in QuakeC, look in the following places:<br>
+</p>
+<ul>
+<li class="level1"><div class="li"> The Quakery: <a href="http://quakery.quakedev.com/qwiki/index.php/List_of_builtin_functions" class="urlextern" title="http://quakery.quakedev.com/qwiki/index.php/List_of_builtin_functions" rel="nofollow">http://quakery.quakedev.com/qwiki/index.php/List_of_builtin_functions</a></div>
+</li>
+<li class="level1"><div class="li"> Nexuiz source: <a href="http://svn.icculus.org/nexuiz/trunk/data/qcsrc/server/builtins.qh?view=markup" class="urlextern" title="http://svn.icculus.org/nexuiz/trunk/data/qcsrc/server/builtins.qh?view=markup" rel="nofollow">builtins.qh</a> for Quake functions, <a href="http://svn.icculus.org/nexuiz/trunk/data/qcsrc/server/extensions.qh?view=markup" class="urlextern" title="http://svn.icculus.org/nexuiz/trunk/data/qcsrc/server/extensions.qh?view=markup" rel="nofollow">extensions.qh</a> for DarkPlaces extensions.</div>
+</li>
+</ul>
+
+</div>
+
+<h2><a name="variables" id="variables">Variables</a></h2>
+<div class="level2">
+
+</div>
+
+<h3><a name="declaring" id="declaring">Declaring</a></h3>
+<div class="level3">
+
+<p>
+<br>To declare a variable, the syntax is the same as in C:<br>
+</p>
+<pre class="code">float i;</pre>
+
+<p>
+<br>However, variables cannot be initialized in their declaration for historical reasons, and trying to do so would define a constant.
+</p>
+
+<p>
+Whenever a variable declaration could be interpreted as something else by the compiler, the <em>var</em> keyword helps disambiguating. For example,<br>
+</p>
+<pre class="code">float(float a, float b) myfunc;</pre>
+
+<p>
+<br>is an old-style function declaration, while<br>
+</p>
+<pre class="code">var float(float a, float b) myfunc;</pre>
+
+<p>
+<br>declares a variable of function type. An alternate and often more readable way to disambiguate variable declarations is using a <em>typedef</em>:<br>
+</p>
+<pre class="code">typedef float(float, float) myfunc_t;
+myfunc_t myfunc;</pre>
+
+</div>
+
+<h3><a name="scope" id="scope">Scope</a></h3>
+<div class="level3">
+
+<p>
+<br>A variable declared in the global scope has global scope, and is visible starting from its declaration to the end of the code. The order the code is read in by the compiler is defined in the file progs.src.
+</p>
+
+<p>
+A variable declared inside a function has function scope, and is visible starting from its declaration to the end of the function (<strong>not</strong> to the end of the block).
+</p>
+
+<p>
+Some variables are declared in <a href="http://svn.icculus.org/nexuiz/trunk/data/qcsrc/server/sys.qh?view=markup" class="urlextern" title="http://svn.icculus.org/nexuiz/trunk/data/qcsrc/server/sys.qh?view=markup" rel="nofollow">sys.qh</a>. Their declarations or names should never be changed, as they have to match the order and names of the variables in the file file <a href="http://svn.icculus.org/twilight/trunk/darkplaces/progdefs.h?view=markup" class="urlextern" title="http://svn.icculus.org/twilight/trunk/darkplaces/progdefs.h?view=markup" rel="nofollow">progdefs.h</a> of the engine exactly, or the code won't load. The special markers <em>end_sys_globals</em> and <em>end_sys_fields</em> are placed to denote the end of this shared declaration section.
+</p>
+
+</div>
+
+<h3><a name="types" id="types">Types</a></h3>
+<div class="level3">
+
+<p>
+<br>Quake only knows four elementary data types: the basic types <em>float</em>, <em>vector</em>, <em>string</em>, and the object type <em>entity</em>. Also, there is a very special type of types, <em>fields</em>, and of course <em>functions</em>. FTEQCC also adds <em>arrays</em>, although these are slow and a bit buggy. Note that there are no pointers!
+</p>
+
+</div>
+
+<h4><a name="float" id="float">float</a></h4>
+<div class="level4">
+
+<p>
+<br>This is the basic numeric type in QuakeC. It represents the standard 32bit floating point type as known from C. It has 23 bits of mantissa, 8 bits of exponent, and one sign bit. The numeric range goes from about 1.175e-38 to about 3.403e+38, and the number of significant decimal digits is about six.
+</p>
+
+<p>
+As float has 23 bits of mantissa, it can also be used to safely represent integers in the range from -16777216 to 16777216. 16777217 is the first integer <em>float</em> can not represent.
+</p>
+
+<p>
+Common functions for <em>float</em> are especially <em>ceil</em>, <em>floor</em> (working just like in C, rounding up/down to the next integer), and <em>random</em>, which yields a random number <em>r</em> with <em>0 &lt;= r &lt; 1</em>.
+</p>
+
+</div>
+
+<h4><a name="vector" id="vector">vector</a></h4>
+<div class="level4">
+
+<p>
+<br>This type is basically three floats together. By declaring a <em>vector v</em>, you also create three floats <em>v_x</em>, <em>v_y</em> and <em>v_z</em> (note the underscore) that contain the components of the vector.
+</p>
+
+<p>
+Vectors can be used with the usual mathematical operators in the usual way used in mathematics. For example, <em>vector + vector</em> simply returns the sum of the vectors, and <em>vector * float</em> scales the vector by the given factor. Note however that dividing a vector by a float is NOT supported, one has to use <em>vector * (1 / float)</em> instead. Multiplying two vectors yields their dot product of type float.
+</p>
+
+<p>
+Common functions to be used on vectors are <em>vlen</em> (vector length), <em>normalize</em> (vector divided by its length, i.e. a unit vector).
+</p>
+
+<p>
+Vector literals are written like '1 0 0'.
+</p>
+
+<p>
+<strong>COMPILER BUG:</strong> always use <em>vector = vector * float</em> instead of <em>vector *= float</em>, as the latter creates incorrect code.
+</p>
+
+</div>
+
+<h4><a name="string" id="string">string</a></h4>
+<div class="level4">
+
+<p>
+<br>A <em>string</em> in QuakeC is an immutable reference to a null-terminated character string stored in the engine. It is not possible to change a character in a string, but there are various functions to create new strings:
+</p>
+
+<p>
+<em>ftos</em> and <em>vtos</em> convert <em>floats</em> and <em>vectors</em> to strings. Their inverses are, of course, <em>stof</em> and <em>stov</em>, which parse a <em>string</em> into a <em>float</em> or a <em>vector</em>.
+</p>
+
+<p>
+<em>strcat</em> concatenates 2 to 8 strings together, as in <em>strcat(“a”, “b”, “c”) == “abc”</em>
+</p>
+
+<p>
+<em>strstrofs(haystack, needle, offset)</em> searches for an occurence of one string in another, as in <em>strstrofs(“haystack”, “ac”, 0) == 5</em>. The offset defines from which starting position to search, and the return value is <em>-1</em> if no match is found. The offset returned is <em>0</em>-based, and to search in the whole string, a start offset of <em>0</em> would be used.
+</p>
+
+<p>
+<em>substring(string, startpos, length)</em> returns part of a string. The offset is <em>0</em>-based here, too.
+</p>
+
+<p>
+Note that there are different kinds of <em>strings</em>, regarding memory management:
+</p>
+<ul>
+<li class="level1"><div class="li"> Temporary strings are strings returned by built-in string handling functions such as <em>substring</em>, <em>strcat</em>. They last only for the duration of the function call from the engine. That means it is safe to return a temporary string in a function you wrote, but not to store them in global variables or objects as their storage will be overwritten soon.</div>
+</li>
+<li class="level1"><div class="li"> Allocated strings are strings that are explicitly allocated. They are returned by <em>strzone</em> and persist until they are freed (using <em>strunzone</em>). Note that <em>strzone</em> does not change the string given as a parameter, but returns the newly allocated string and keeps the passed temporary string the same way! That means:</div>
+<ul>
+<li class="level2"><div class="li"> To allocate a string, do for example <em>myglobal = strzone(strcat(“hello ”, “world”));</em></div>
+</li>
+<li class="level2"><div class="li"> To free the string when it is no longer needed, do: <em>strunzone(myglobal);</em></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Engine owned strings, such as <em>netname</em>. These should be treated just like temporary strings: if you want to keep them in your own variables, <em>strzone</em> them.</div>
+</li>
+<li class="level1"><div class="li"> Constant strings. A string literal like <em>“foo”</em> gets permanent storage assigned by the compiler. There is no need to <em>strzone</em> such strings.</div>
+</li>
+<li class="level1"><div class="li"> The null string. A global uninitialized <em>string</em> variable has the special property that is is usually treated like the constant, empty, string <em>””</em> (so using it does not constitute an error), but it is the only string that evaluates to FALSE in an if expression (but not in the ! operator - in boolean context, the string ”” counts as FALSE too). As this is a useful property, Nexuiz code declares such a string variable of the name <em>string_null</em>. That means that the following patterns are commonly used for allocating strings:</div>
+<ul>
+<li class="level2"><div class="li"> Assigning to a global string variable: <em>if(myglobal) strunzone(myglobal); myglobal = strzone(...);</em></div>
+</li>
+<li class="level2"><div class="li"> Freeing the global string variable: <em>if(myglobal) strunzone(myglobal); myglobal = string_null;</em></div>
+</li>
+<li class="level2"><div class="li"> Checking if a global string value has been set: <em>if(myglobal) { value has been set; } else { string has not yet been set; }</em></div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+<h4><a name="entity" id="entity">entity</a></h4>
+<div class="level4">
+
+<p>
+<br>The main object type in QuakeC is <em>entity</em>, a reference to an engine internal object. An <em>entity</em> can be imagined as a huge struct, containing many <em>fields</em>. This is the only object type in the language. However, <em>fields</em> can be added to the <em>entity</em> type by the following syntax:
+</p>
+
+<p>
+<em>.float myfield;</em>
+</p>
+
+<p>
+and then all objects <em>e</em> get a field that can be accessed like in <em>e.myfield</em>.
+</p>
+
+<p>
+The special entity <em>world</em> also doubles as the <em>null</em> reference. It can not be written to other than in the <em>spawnfunc_worldspawn</em> function that is run when the map is loaded, and is the only entity value that counts as <em>false</em> in an <em>if</em> expression. Thus, functions that return <em>entities</em> tend to return <em>world</em> to indicate failure (e.g. <em>find</em> returns <em>world</em> to indicate no more entity can be found).
+</p>
+
+<p>
+If a field has not been set, it gets the usual zero value of the type when the object is created (i.e. <em>0</em> for <em>float</em>, <em>string_null</em> for <em>string</em>, <em>'0 0 0'</em> for <em>vector</em>, and <em>world</em> for <em>entity</em>).
+</p>
+
+</div>
+
+<h4><a name="fields" id="fields">fields</a></h4>
+<div class="level4">
+
+<p>
+<br>A reference to such a field can be stored too, in a field variable. It is declared and used like<br>
+</p>
+<pre class="code">.float myfield;
+// ...
+// and in some function:
+var .float myfieldvar;
+myfieldvar = myfield;
+e.myfieldvar = 42;</pre>
+
+<p>
+<br>Field variables can be used as function parameters too - in that case you leave the <em>var</em> keyword out, as it is not needed for disambiguation.
+</p>
+
+</div>
+
+<h4><a name="functions" id="functions">functions</a></h4>
+<div class="level4">
+
+<p>
+<br>Functions work just like in C:<br>
+</p>
+<pre class="code">float sum3(float a, float b, float c)
+{
+  return a + b + c;
+}</pre>
+
+<p>
+<br>However, the syntax to declare function pointers is simplified:<br>
+</p>
+<pre class="code">typedef float(float, float, float) op3func_t;
+var float(float a, float b, float c) f;
+op3func_t g;
+f = sum3;
+g = f;
+print(ftos(g(1, 2, 3)), "\n"); // prints 6</pre>
+
+<p>
+<br>Also note that the <em>var</em> keyword is used again to disambiguate from a global function declaration.
+</p>
+
+<p>
+In original QuakeC by Id Software, this simplified function pointer syntax also was the only way to define functions (you may still encounter this in Nexuiz code in a few places):<br>
+</p>
+<pre class="code">float(float a, float b) sum2 = {
+  return a + b;
+}</pre>
+
+<p>
+<br>A special kind of functions are built-in functions (defined by the engine). These are imported using so-called built-in numbers, with a syntax like<br>
+</p>
+<pre class="code">string strcat(string a, string b, ...) = #115;</pre>
+
+</div>
+
+<h4><a name="void" id="void">void</a></h4>
+<div class="level4">
+
+<p>
+<br>Just like in C, the <em>void</em> type is a special placeholder type to declare that a function returns nothing. However, unlike in C, it is possible to declare variables of this type, although the only purpose of this is to declare a variable name without allocating space for it. The only occasion where this is used is the special <em>end_sys_globals</em> and <em>end_sys_fields</em> marker variables.
+</p>
+
+</div>
+
+<h4><a name="arrays" id="arrays">arrays</a></h4>
+<div class="level4">
+
+<p>
+<br>As the QuakeC virtual machine provides no pointers or similar ways to handle arrays, array support is added by FTEQCC and very limited. Arrays can only be global, must have a fixed size (not dynamically allocated), and are a bit buggy and slow. Almost as great as in FORTRAN, except they can't be multidimensional either!
+</p>
+
+<p>
+You declare arrays like in C:<br>
+</p>
+<pre class="code">#define MAX_ASSASSINS 16
+entity assassins[MAX_ASSASSINS];
+#define BTREE_MAX_CHILDREN 5
+.entity btree_child[BTREE_MAX_CHILDREN];
+#define MAX_FLOATFIELDS 3
+var .float myfloatfields[MAX_FLOATFIELDS];</pre>
+
+<p>
+<br>The former is a global array of entities and can be used the usual way:<br>
+</p>
+<pre class="code">assassins[self.assassin_index] = self;</pre>
+
+<p>
+<br>The middle one is a global array of (allocated and constant) entity fields and <strong>not</strong> a field of array type (which does not exist), so its usage looks a bit strange:<br>
+</p>
+<pre class="code">for(i = 0; i &lt; BTREE_MAX_CHILDREN; ++i)
+  self.(btree_child[i]) = world;</pre>
+
+<p>
+<br>Note that this works:<br>
+</p>
+<pre class="code">var .entity indexfield;
+indexfield = btree_child[i];
+self.indexfield = world;</pre>
+
+<p>
+<br>The latter one is a global array of (assignable) entity field variables, and looks very similar:<br>
+</p>
+<pre class="code">myfloatfields[2] = health;
+self.(myfloatfields[2]) = 0;
+// equivalent to self.health = 0;</pre>
+
+<p>
+<br>Do not use arrays when you do not need to - using both arrays and function calls in the same expression can get messed up (<strong>COMPILER BUG</strong>), and arrays are slowly emulated using functions <em>ArrayGet*myfloatfields</em> and <em>ArraySet*myfloatfields</em> the compiler generates that internally do a binary search for the array index.
+</p>
+
+</div>
+
+<h2><a name="peculiar_language_constructs" id="peculiar_language_constructs">Peculiar language constructs</a></h2>
+<div class="level2">
+
+<p>
+<br>This section deals with language constructs in FTEQCC that are not similar to anything in other languages.
+</p>
+
+</div>
+
+<h3><a name="if_not" id="if_not">if not</a></h3>
+<div class="level3">
+
+<p>
+<br>There is a second way to do a negated <em>if</em>:<br>
+</p>
+<pre class="code">if not(expression)
+  ...</pre>
+
+<p>
+<br>It compiles to slightly more efficient code than<br>
+</p>
+<pre class="code">if(!expression)
+  ...</pre>
+
+<p>
+<br>and has the notable difference that<br>
+</p>
+<pre class="code">if not("")
+  ...</pre>
+
+<p>
+<br>will not execute (as <em>””</em> counts as true in an <em>if</em> expression), but<br>
+</p>
+<pre class="code">if(!"")
+  ...</pre>
+
+<p>
+<br>will execute (as both <em>””</em> and <em>string_null</em> is false when boolean operators are used on it)..
+</p>
+
+</div>
+
+<h2><a name="common_patterns" id="common_patterns">Common patterns</a></h2>
+<div class="level2">
+
+<p>
+<br>Some patterns in code that are often encountered in Nexuiz are listed here, in no particular order.
+</p>
+
+</div>
+
+<h3><a name="classes_in_quake" id="classes_in_quake">Classes in Quake</a></h3>
+<div class="level3">
+
+<p>
+<br>The usual way to handle classes in Quake is using <em>fields</em>, function pointers and the special property <em>classname</em>.
+</p>
+
+<p>
+But first, let's look at how the engine creates entities when the map is loaded.
+</p>
+
+<p>
+Assume you have the following declarations in your code:<br>
+</p>
+<pre class="code">entity self;
+.string classname;
+.vector origin;
+.float height;</pre>
+
+<p>
+<br>and the engine encounters the entity<br>
+</p>
+<pre class="code">{
+"classname" "func_bobbing"
+"height" "128"
+"origin" "0 32 -64"
+}</pre>
+
+<p>
+<br>then it will, during loading the map, behave as if the following QuakeC code was executed:<br>
+</p>
+<pre class="code">self = spawn();
+self.classname = "func_bobbing";
+self.height = 128;
+self.origin = '0 32 -64';
+spawnfunc_func_bobbing();</pre>
+
+<p>
+<br>We learn from this:
+</p>
+<ul>
+<li class="level1"><div class="li"> The special global <em>entity</em> variable <em>self</em> is used when “methods” of an object are called, like - in this case - the “constructor” or spawn function <em>spawnfunc_func_bobbing</em>.</div>
+</li>
+<li class="level1"><div class="li"> Before calling the spawn function, the engine sets the mapper specified fields to the values. String values can be treated by the QC code as if they are constant strings, that means there is no need to <em>strzone</em> them.</div>
+</li>
+<li class="level1"><div class="li"> Spawn functions always have the <em>spawnfunc_</em> name prefix and take no arguments.</div>
+</li>
+<li class="level1"><div class="li"> The <em>string</em> field <em>classname</em> always contains the name of the entity class when it was created by the engine.</div>
+</li>
+<li class="level1"><div class="li"> As the engine uses this pattern when loading maps and this can't be changed, it makes very much sense to follow this pattern for all entities, even for internal use. Especially making sure <em>classname</em> is set to a sensible value is very helpful.</div>
+</li>
+</ul>
+
+<p>
+<br>Methods are represented as fields of function type:<br>
+</p>
+<pre class="code">.void() think;</pre>
+
+<p>
+<br>and are assigned to the function to be called in the spawn function, like:<br>
+</p>
+<pre class="code">void func_bobbing_think()
+{
+  // lots of stuff
+}</pre>
+<pre class="code">void spawnfunc_func_bobbing()
+{
+  // ... even more stuff ...
+  self.think = func_bobbing_think;
+}</pre>
+
+<p>
+<br>To call a method of the same object, you would use<br>
+</p>
+<pre class="code">self.think();</pre>
+
+<p>
+<br>but to call a method of another object, you first have to set <em>self</em> to that other object, but you typically need to restore <em>self</em> to its previous value when done:<br>
+</p>
+<pre class="code">entity oldself;
+// ...
+oldself = self;
+self.think();
+self = oldself;</pre>
+
+</div>
+
+<h3><a name="think_functions" id="think_functions">Think functions</a></h3>
+<div class="level3">
+
+<p>
+<br>A very common entry point to QuakeC functions are so-called think functions.
+</p>
+
+<p>
+They use the following declarations:<br>
+</p>
+<pre class="code">.void() think;
+.float nextthink;</pre>
+
+<p>
+<br>If <em>nextthink</em> is not zero, the object gets an attached timer: as soon as <em>time</em> reaches <em>nextthink</em>, the <em>think</em> method is called with <em>self</em> set to the object. Before that, <em>nextthink</em> is set to zero. So a typical use is a periodic timer, like this:<br>
+</p>
+<pre class="code">void func_awesome_think()
+{
+  bprint("I am awesome!\n");
+  self.nextthink = time + 2;
+}</pre>
+<pre class="code">void spawnfunc_func_awesome()
+{
+  // ...
+  self.think = func_awesome_think;
+  self.nextthink = time + 2;
+}</pre>
+
+</div>
+
+<h3><a name="find_loops" id="find_loops">Find loops</a></h3>
+<div class="level3">
+
+<p>
+<br>One common way to loop through entities is the find loop. It works by calling a built-in function like<br>
+</p>
+<pre class="code">entity find(entity start, .string field, string match) = #18;</pre>
+
+<p>
+<br>repeatedly. This function is defined as follows:<br>
+</p>
+<ul>
+<li class="level1"><div class="li"> if <em>start</em> is <em>world</em>, the first entity <em>e</em> with <em>e.field == match</em> is returned</div>
+</li>
+<li class="level1"><div class="li"> otherwise, the entity <em>e</em> <strong>after</strong> <em>start</em> in the entity order with <em>e.field == match</em> is returned</div>
+</li>
+<li class="level1"><div class="li"> if no such entity exists, <em>world</em> is returned</div>
+</li>
+</ul>
+
+<p>
+<br>It can be used to enumerate all entities of a given type, for example <em>“info_player_deathmatch”</em>:<br>
+</p>
+<pre class="code">entity e;
+for(e = world; (e = find(e, classname, "info_player_deathmatch")); )
+  print("Spawn point found at ", vtos(e.origin), "\n");</pre>
+
+<p>
+<br>There are many other functions that can be used in find loops, for example <em>findfloat</em>, <em>findflags</em>, <em>findentity</em>.
+</p>
+
+<p>
+Note that the function <em>findradius</em> is misnamed and is not used as part of a find loop, but instead sets up a linked list of the entities found.
+</p>
+
+</div>
+
+<h3><a name="linked_lists" id="linked_lists">Linked lists</a></h3>
+<div class="level3">
+
+<p>
+<br>An alternate way to loop through a set of entities is a linked list. I assume you are already familiar with the concept, so I'll skip information about how to manage them.
+</p>
+
+<p>
+It is however noteworthy that some built-in functions create such linked lists using the <em>entity</em> field <em>chain</em> as list pointer. Some of these functions are the aforementioned <em>findradius</em>, and <em>findchain</em>, <em>findchainfloat</em>, <em>findchainflags</em> and <em>findchainentity</em>.
+</p>
+
+<p>
+A loop like the following could be used with these:<br>
+</p>
+<pre class="code">entity e;
+for(e = findchain(classname, "info_player_deathmatch"); e; e = e.chain)
+  print("Spawn point found at ", vtos(e.origin), "\n");</pre>
+
+<p>
+<br>The main advantage of linked lists however is that you can keep them in memory by using other fields than <em>chain</em> for storing their pointers. That way you can avoid having to search all entities over and over again (which is what <em>find</em> does internally) when you commonly need to work with the same type of entities.
+</p>
+
+</div>
+
+<h3><a name="error_handling" id="error_handling">Error handling</a></h3>
+<div class="level3">
+
+<p>
+<br>Error handling is virtually not existent in Quake C code. There is no way to throw and handle exceptions.
+</p>
+
+<p>
+However, built-in functions like <em>fopen</em> return <em>-1</em> on error.
+</p>
+
+<p>
+To report an error condition, the following means are open to you:
+</p>
+<ul>
+<li class="level1"><div class="li"> Use the <em>print</em> function to spam it to the console. Hopefully someone will read that something went wrong. After that, possibly use <em>remove</em> to delete the entity that caused the error (but make sure there are no leftover references to it!).</div>
+</li>
+<li class="level1"><div class="li"> Use the <em>error</em> function to abort the program code and report a fatal error with a backtrace showing how it came to it.</div>
+</li>
+<li class="level1"><div class="li"> Use the <em>objerror</em> function to abort spawning an entity (i.e. removing it again). This also prints an error message, and the entity that caused the error will not exist in game. Do not forget to <em>return</em> from the spawn function directly after calling <em>objerror</em>!</div>
+</li>
+</ul>
+
+</div>
+
+<h3><a name="target_and_targetname" id="target_and_targetname">target and targetname</a></h3>
+<div class="level3">
+
+<p>
+<br>In the map editor, entities can be connected by assigning a name to them in the <em>target</em> field of the targeting entity and the <em>targetname</em> field of the targeted entity.
+</p>
+
+<p>
+To QuakeC, these are just strings - to actually use the connection, one would use a find loop:<br>
+</p>
+<pre class="code">entity oldself;
+oldself = self;
+for(self = world; (self = find(self, targetname, oldself.target)); )
+  self.use();
+self = oldself;</pre>
+
+</div>
+
+<h3><a name="the_enemy_field_and_its_friends" id="the_enemy_field_and_its_friends">the enemy field and its friends</a></h3>
+<div class="level3">
+
+<p>
+<br>As the find loop for <em>target</em> and <em>targetname</em> causes the engine to loop through all entities and compare their <em>targetname</em> field, it may make sense to do this only once when the map is loaded.
+</p>
+
+<p>
+For this, a common pattern is using the pre-defined <em>enemy</em> field to store the target of an entity.
+</p>
+
+<p>
+However, this can't be done during spawning of the entities yet, as the order in which entities are loaded is defined by the map editor and tends to be random. So instead, one should do that at a later time, for example when the entity is first used, in a think function, or - the preferred way in the Nexuiz code base - in an <em>InitializeEntity</em> function:<br>
+</p>
+<pre class="code">void teleport_findtarget()
+{
+  // ...
+  self.enemy = find(world, targetname, self.target);
+  if(!self.enemy)
+    // some error handling...
+  // ...
+}</pre>
+<pre class="code">void spawnfunc_trigger_teleport()
+{
+  // ...
+  InitializeEntity(self, teleport_findtarget, INITPRIO_FINDTARGET);
+  // ...
+}</pre>
+
+<p>
+<br><em>InitializeEntity</em> functions are guaranteed to be executed at the beginning of the next frame, before the <em>think</em> functions are run, and are run in an order according to their priorities (the <em>INITPRIO_</em> constants).
+</p>
+
+</div>
+
+<h3><a name="if-chains" id="if-chains">if-chains</a></h3>
+<div class="level3">
+
+<p>
+<br>With default compile options (i.e. if the option <em>-flo</em> is not passed to the compiler), boolean expressions are evaluated fully. This means that in<br>
+</p>
+<pre class="code">if(!flag &amp;&amp; SomeComplexFunction(self))
+  ...</pre>
+
+<p>
+<br><em>SomeCompexFunction</em> is always evaluated, even if <em>flag</em> is true. To avoid this, one can use:<br>
+</p>
+<pre class="code">if(!flag)
+if(SomeComplexFunction(self))
+  ...</pre>
+
+</div>
+
+<h3><a name="tracing" id="tracing">Tracing</a></h3>
+<div class="level3">
+
+</div>
+
+<h2><a name="pitfalls_compiler_bugs" id="pitfalls_compiler_bugs">Pitfalls, compiler bugs</a></h2>
+<div class="level2">
+
+</div>
+
+<h3><a name="complex_operators" id="complex_operators">complex operators</a></h3>
+<div class="level3">
+
+<p>
+<br>Do not count on the modifying and reading operators like <em>+=</em> or <em>++</em> to always work. Using them in simple cases like<br>
+</p>
+<pre class="code">a += 42;
+for(i = 0; i &lt; n; ++i)
+  ...</pre>
+
+<p>
+<br>is generally safe, but complex constructs like<br>
+</p>
+<pre class="code">self.enemy.frags += self.value--;</pre>
+
+<p>
+<br>are doomed. Instead, split up such expressions into simpler steps:<br>
+</p>
+<pre class="code">self.enemy.frags = self.enemy.frags + self.value;
+self.value -= 1;</pre>
+
+<p>
+<br>The compiler warning <strong>RETURN VALUE ALREADY IN USE</strong> is a clear indicator that an expression was too complex for it to deal with it correctly. If you encounter the warning, do make sure you change the code to no longer cause it, as the generated code <strong>will</strong> be incorrect then.
+</p>
+
+<p>
+Also, do not use the <em>+=</em> like operators on <em>vector</em>s, as they are known to create incorrect code and only operate on the <em>x</em> component of the vector.
+</p>
+
+</div>
+
+<h3><a name="functions_vs_arrays" id="functions_vs_arrays">functions vs arrays</a></h3>
+<div class="level3">
+
+<p>
+<br>Mixing function calls with array dereferencing, or doing more than one array dereferencing in the same expression, is known to create incorrect code. Avoid constructs like<br>
+</p>
+<pre class="code">print(ftos(floatarray[i]), " --&gt; ", stringarray[i], anotherstringarray[i], "\n");</pre>
+
+<p>
+<br>as the array dereferencings and the ftos return value are likely to overwrite each other. Instead, simplify it:<br>
+</p>
+<pre class="code">float f;
+string s, s2;
+// ...
+f = floatarray[i];
+s = stringarray[i];
+s2 = anotherstringarray[i];
+print(ftos(f), " --&gt; ", s, s2, "\n");</pre>
+
+</div>
+
+<h3><a name="vectoangles_does_not_match_makevectors" id="vectoangles_does_not_match_makevectors">vectoangles does not match makevectors</a></h3>
+<div class="level3">
+
+<p>
+<br>The pitch angle is inverted between these two functions. You have to negate the pitch (i.e. the <em>x</em> component of the vector representing the euler angles) to make it fit the other function.
+</p>
+
+<p>
+As a rule of thumb, <em>vectoangles</em> returns angles as stored in the <em>angles</em> field (used to rotate entities for display), while <em>makevectors</em> expects angles as stored in the <em>v_angle</em> field (used to transmit the direction the player is aiming). There is about just as much good reason in this as there is for 1:1 patch cables, just deal with it.
+</p>
+
+</div>
+
+<h2><a name="entry_points" id="entry_points">Entry points</a></h2>
+<div class="level2">
+
+<p>
+<br>The server-side code calls the following entry points of the QuakeC code:<br>
+</p>
+<ul>
+<li class="level1"><div class="li"> <em>void ClientDisconnect()</em>: called when a player leaves the server. Do not forget to <em>strunzone</em> all <em>strings</em> stored in the player entity here, and do not forget to clear all references to the player!</div>
+</li>
+<li class="level1"><div class="li"> <em>void SV_Shutdown()</em>: called when the map changes or the server is quit. A good place to store persistent data like the database of race records.</div>
+</li>
+<li class="level1"><div class="li"> <em>void SV_ChangeTeam(float newteam)</em>: called when a player changes his team. Can be used to disallow team changes, or to clear the player's scores.</div>
+</li>
+<li class="level1"><div class="li"> <em>void ClientKill()</em>: called when the player uses the “kill” console command to suicide.</div>
+</li>
+<li class="level1"><div class="li"> <em>void RestoreGame()</em>: called directly after loading a save game. Useful to, for example, load the databases from disk again.</div>
+</li>
+<li class="level1"><div class="li"> <em>void ClientConnect()</em>: called as soon as a client connected, has downloaded everything, and is ready to play. The typical place to initialize the player entity.</div>
+</li>
+<li class="level1"><div class="li"> <em>void PutClientInServer()</em>: called when the client requests to spawn. Typically puts the player somewhere on the map and lets him play.</div>
+</li>
+<li class="level1"><div class="li"> <em>.float SendEntity(entity to, float sendflags)</em>: called when the engine requires a CSQC networked entity to send itself to a client, referenced by <em>to</em>. Should write some data to <em>MSG_ENTITY</em>. <em>FALSE</em> can be returned to make the entity not send. See EXT_CSQC for information on this.</div>
+</li>
+<li class="level1"><div class="li"> <em>void <acronym title="Uniform Resource Identifier">URI</acronym>_Get_Callback(...)</em>:</div>
+</li>
+<li class="level1"><div class="li"> <em>void GameCommand(string command)</em>: called when the “sv_cmd” console command is used, which is commonly used to add server console commands to the game. It should somehow handle the command, and print results to the server console.</div>
+</li>
+<li class="level1"><div class="li"> <em>void SV_OnEntityNoSpawnFunction()</em>: called when there is no matching spawn function for an entity. Just ignore this...</div>
+</li>
+<li class="level1"><div class="li"> <em>void SV_OnEntityPreSpawnFunction</em>: called before even looking for the spawn function, so you can even change its classname in there. If it remove()s the entity, the spawn function will not be looked for.</div>
+</li>
+<li class="level1"><div class="li"> <em>void SV_OnEntityPostSpawnFunction</em>: called ONLY after its spawn function or SV_OnEntityNoSpawnFunction was called, and skipped if the entity got removed by either.</div>
+</li>
+<li class="level1"><div class="li"> <em>void SetNewParms()</em>:</div>
+</li>
+<li class="level1"><div class="li"> <em>void SetChangeParms()</em>: </div>
+</li>
+<li class="level1"><div class="li"> <em>.float customizeentityforclient()</em>: called for an entity before it is going to be sent to the player specified by <em>other</em>. Useful to change properties of the entity right before sending, e.g. to make an entity appear only to some players, or to make it have a different appearance to different players.</div>
+</li>
+<li class="level1"><div class="li"> <em>.void touch()</em>: called when two entities touch; the other entity can be found in <em>other</em>. It is of course called two times (the second time with <em>self</em> and <em>other</em> reversed).</div>
+</li>
+<li class="level1"><div class="li"> <em>.void contentstransition()</em>:</div>
+</li>
+<li class="level1"><div class="li"> <em>.void think()</em>: described above, basically a timer function.</div>
+</li>
+<li class="level1"><div class="li"> <em>.void blocked()</em>: called when a <em>MOVETYPE_PUSH</em> entity is blocked by another entity. Typically does either nothing, reverse the direction of the door moving, or kills the player who dares to step in the way of the Mighty Crusher Door.</div>
+</li>
+<li class="level1"><div class="li"> <em>.void movetypesteplandevent()</em>: called when a player hits the floor.</div>
+</li>
+<li class="level1"><div class="li"> <em>.void PlayerPreThink()</em>: called before a player runs his physics. As a special exception, <em>frametime</em> is set to 0 if this is called for a client-side prediction frame, as it still will get called for server frames.</div>
+</li>
+<li class="level1"><div class="li"> <em>.void PlayerPreThink()</em>: called after a player runs his physics. As a special exception, <em>frametime</em> is set to 0 if this is called for a client-side prediction frame, as it still will get called for server frames.</div>
+</li>
+<li class="level1"><div class="li"> <em>void StartFrame()</em>: called at the beginning of each server frame, before anything else is done.</div>
+</li>
+<li class="level1"><div class="li"> <em>void EndFrame()</em>: called at the end of each server frame, just before waiting until the next frame is due.</div>
+</li>
+<li class="level1"><div class="li"> <em>void SV_PlayerPhysics()</em>: allows to replace the player physics by your own code. The movement the player requests can be found in the <em>vector</em> field <em>movement</em>, and the currently pressed buttons are in various fields whose names are aliased to the <em>BUTTON_</em> macros.</div>
+</li>
+<li class="level1"><div class="li"> <em>void SV_ParseClientCommand(string command)</em>: handles commands sent by the client to the server using “cmd ...”. Unhandled commands can be passed to the built-in function <em>clientcommand</em> to execute the normal engine behaviour.</div>
+</li>
+</ul>
+
+</div>
+
+    <!-- wikipage stop -->
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+  
+  <div class="stylefoot">
+
+    <div class="meta">
+      <div class="user">
+              </div>
+      <div class="doc">
+        dev/quakec.txt · Last modified: 2009/06/01 01:40 by dokujisan      </div>
+    </div>
+
+   
+    <div class="bar" id="bar__bottom">
+      <div class="bar-left" id="bar__bottomleft">
+                <a href="http://ouns.nexuizninjaz.com/dev_quakec-revisions.html?do=revisions" class="action revisions" accesskey="o" rel="nofollow">Old revisions</a>      </div>
+      <div class="bar-right" id="bar__bottomright">
+                                        <a href="http://ouns.nexuizninjaz.com/fullindex.html" class="action index" accesskey="x" rel="nofollow">Index</a>
+        <a href="http://ouns.nexuizninjaz.com/dev_quakec.html#dokuwiki__top" class="action top" accesskey="x">Back to top</a>&nbsp;
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="footerinc">
+<table><tbody><tr><td colspan="2">
+  <a href="http://www.nexuizninjaz.com/" title="Nexuiz Ninjaz"><img src="./quakec_reference_files/nnbutton.png" width="80" height="15" alt="Nexuiz Ninjaz"></a>
+
+  <a href="http://ouns.nexuizninjaz.com/feed.php" title="Recent changes RSS feed"><img src="./quakec_reference_files/button-rss.png" width="80" height="15" alt="Recent changes RSS feed"></a>
+
+  <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/" rel="license" title="Creative Commons License"><img src="./quakec_reference_files/button-cc.gif" width="80" height="15" alt="Creative Commons License"></a>
+
+  <a href="https://www.paypal.com/xclick/business=andi%40splitbrain.org&amp;item_name=DokuWiki+Donation&amp;no_shipping=1&amp;no_note=1&amp;tax=0&amp;currency_code=EUR&amp;lc=US" title="Donate"><img src="./quakec_reference_files/button-donate.gif" alt="Donate" width="80" height="15"></a>
+
+  <a href="http://www.php.net/" title="Powered by PHP"><img src="./quakec_reference_files/button-php.gif" width="80" height="15" alt="Powered by PHP"></a>
+
+  <a href="http://validator.w3.org/check/referer" title="Valid XHTML 1.0"><img src="./quakec_reference_files/button-xhtml.png" width="80" height="15" alt="Valid XHTML 1.0"></a>
+
+  <a href="http://jigsaw.w3.org/css-validator/check/referer" title="Valid CSS"><img src="./quakec_reference_files/button-css.png" width="80" height="15" alt="Valid CSS"></a>
+
+  <a href="http://wiki.splitbrain.org/wiki:dokuwiki" title="Driven by DokuWiki"><img src="./quakec_reference_files/button-dw.png" width="80" height="15" alt="Driven by DokuWiki"></a>
+</td></tr>
+<tr><td valign="middle"><img src="./quakec_reference_files/gnu-fdl.png" width="88px" height="31px" alt="GFDL logo"></td><td valign="middle"><b>GFDLcontent</b> <small>Unless mentioned on the <a href="http://ouns.nexuizninjaz.com/wiki_licensing.html">licensing page</a>, the work on this page is licensed under the <a href="http://en.wikipedia.org/wiki/GNU_Free_Documentation_License">GNU Free Documentation License</a>. The author states that the text and images can be used within the restrictions of this license (for example, they can be incorporated into certain free encyclopedias such as Wikipedia).</small>
+</td></tr>
+<tr><td colspan="2">
+Kindly hosted by <a href="http://www.nexuizninjaz.com/">NexuizNinjaz.com</a>
+</td></tr></tbody></table> 
+
+
+</div>
+
+<div class="no"><img src="./quakec_reference_files/indexer.php" width="1" height="1" alt=""></div>
+
+
+<!-- Mirrored from /dev:quakec by HTTrack Website Copier/3.x [XR&CO'2010], Fri, 29 Jul 2011 07:22:53 GMT -->
+<!-- Added by HTTrack --><!-- /Added by HTTrack -->
+
+</body></html>
